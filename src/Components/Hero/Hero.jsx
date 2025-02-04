@@ -31,7 +31,11 @@ function Hero() {
             </a>
           </span>
           <div className={styles.resume}>
-            <a href="../../assets" download="Banudeep Reddy Resume.pdf">
+            {/* <a href="../../assets/" download="Banudeep_Reddy_Resume.pdf"> */}
+            <a
+              href="src/assets/Banudeep_Reddy_Resume.pdf"
+              download="Banudeep_Reddy_Resume.pdf"
+            >
               Resume
             </a>
           </div>
@@ -40,5 +44,5 @@ function Hero() {
     </section>
   );
 }
-
+// C:\Users\banud\OneDrive\Documents\GitHub\Portfolio\src\assets\Banudeep_Reddy_Resume.pdf
 export default Hero;
