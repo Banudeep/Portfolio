@@ -33,7 +33,7 @@ function Hero() {
           <div className={styles.resume}>
             {/* <a href="../../assets/" download="Banudeep_Reddy_Resume.pdf"> */}
             <a
-              href="src/assets/Banudeep_Reddy_Resume.pdf"
+              href="Banudeep_Reddy_Resume.pdf"
               download="Banudeep_Reddy_Resume.pdf"
             >
               Resume
