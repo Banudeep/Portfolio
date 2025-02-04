@@ -18,20 +18,23 @@ function Hero() {
           </h1>
           <h2>Software Engineer</h2>
           <p>One liner summary</p>
-        </div>
-        <span>
-          <a
-            href="https://www.linkedin.com/in/banudeep-reddy-gade-118013212/"
-            target="_blank"
-          >
-            <img src={linkedin_icon} />
-          </a>
-          <a href="https://github.com/Banudeep" target="_blank">
-            <img src={github_icon} />
-          </a>
-        </span>
-        <div className={styles.resume}>
-          <button>Resume</button>
+
+          <span>
+            <a
+              href="https://www.linkedin.com/in/banudeep-reddy-gade-118013212/"
+              target="_blank"
+            >
+              <img src={linkedin_icon} />
+            </a>
+            <a href="https://github.com/Banudeep" target="_blank">
+              <img src={github_icon} />
+            </a>
+          </span>
+          <div className={styles.resume}>
+            <a href="../../assets" download="Banudeep Reddy Resume.pdf">
+              Resume
+            </a>
+          </div>
         </div>
       </div>
     </section>

@@ -18,7 +18,7 @@ function Projects() {
           <h3>Project Name</h3>
           <p> description </p>
         </a>
-        {/* <a href="" target="_blank">
+        <a href="" target="_blank">
           <img className="hover" src={github_icon} alt="project Picture" />
           <h3>Project Name</h3>
           <p> description </p>
@@ -27,7 +27,7 @@ function Projects() {
           <img className="hover" src={github_icon} alt="project Picture" />
           <h3>Project Name</h3>
           <p> description </p>
-        </a> */}
+        </a>
       </div>
     </section>
   );

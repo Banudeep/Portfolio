@@ -18,11 +18,11 @@
 .skillList {
   display: flex;
   justify-content: center;
-  align-self: center;
   flex-wrap: wrap;
   row-gap: 20px;
   max-width: 28ch;
   margin: 30px auto 30px;
+  gap: 10px;
 }
 
 hr {
@@ -31,4 +31,25 @@ hr {
   border: none;
   background-color: var(--text-color);
   margin: auto;
+}
+
+@media (width >= 800px) {
+  .container {
+    .skillList {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-evenly;
+      padding: 0 30px;
+      max-width: 250ch;
+      margin: 30px auto 30px;
+    }
+
+    hr {
+      width: 300px;
+      height: 1px;
+      border: none;
+      background-color: var(--text-color);
+      margin: auto;
+    }
+  }
 }
