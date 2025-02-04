@@ -5,20 +5,20 @@ function Navbar() {
   return (
     <nav className={styles.navbar}>
       <div className={styles.Home}>
-        <a href="/home">Banudeep Reddy Gade</a>
+        <a href="#Hero">Banudeep Reddy Gade</a>
       </div>
       <div className={styles.nav_links}>
         <li>
-          <a href="/about">About</a>
+          <a href="#Hero">About</a>
         </li>
         <li>
-          <a href="/Projects">Projects</a>
+          <a href="#Projects">Projects</a>
         </li>
         <li>
-          <a href="/Skills">Skills</a>
+          <a href="#Skills">Skills</a>
         </li>
         <li>
-          <a href="/contact">contact</a>
+          <a href="#contact">contact</a>
         </li>
       </div>
     </nav>

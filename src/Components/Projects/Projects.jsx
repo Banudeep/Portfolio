@@ -4,7 +4,8 @@ import github_icon from "../../assets/github_icon.png";
 
 function Projects() {
   return (
-    <section id="projects" className={styles.container}>
+    <section id="Projects" className={styles.container}>
+      {/* <br></br> */}
       <h1>projects</h1>
       <div className={styles.projectsContainer}>
         <a href="" target="_blank">

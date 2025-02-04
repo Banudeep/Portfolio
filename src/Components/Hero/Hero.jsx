@@ -5,7 +5,7 @@ import profile_pic from "../../assets/banudeep_picture.jpeg";
 
 function Hero() {
   return (
-    <>
+    <section id="Hero">
       <div className={styles.container}>
         <img
           src={profile_pic}
@@ -34,7 +34,7 @@ function Hero() {
           <button>Resume</button>
         </div>
       </div>
-    </>
+    </section>
   );
 }
 
