@@ -1,0 +1,55 @@
+.navbar {
+  display: flex;
+  background-color: #000000;
+  padding: 10px 10px;
+  font-size: auto;
+  justify-content: space-between;
+  color: white;
+
+  position: fixed; /* Fixes the navbar to the viewport */
+  top: 0; /* Aligns the navbar to the top edge of the viewport */
+  left: 0; /* Aligns the navbar to the left edge of the viewport */
+  right: 0; /* Ensures the navbar extends to the right edge of the viewport */
+  z-index: 1000; /* Keeps the navbar on top of other page elements */
+  width: 100%;
+}
+
+.Home {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 10px;
+  margin-left: 50px;
+  padding: 10 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #4caf50;
+  }
+}
+
+.nav_links {
+  list-style: none;
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  gap: 50px;
+  margin-left: auto;
+  margin-right: 50px;
+  padding: 10px 10px;
+
+  a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s;
+  }
+
+  a:hover {
+    color: #4caf50;
+  }
+}
