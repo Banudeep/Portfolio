@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "../ProjectsStyles.module.css";
 import github_icon from "../../../assets/github_icon.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Icon color mapping using simpler structure
 const iconColors = {
@@ -22,30 +21,14 @@ const ProjectCard = ({ project }) => {
     e.target.src = github_icon; // Set fallback image
   };
 
-  // Function to get color for an icon - simplified approach
-  const getIconColor = (icon) => {
-    if (!icon || !icon.iconName) return "#555";
-    return iconColors[icon.iconName] || "#555";
-  };
-
   // Function to render a tech icon or logo
   const renderTechIcon = (tech) => {
     // If we have a custom logo image for this tech
     if (tech.logo) {
-      return (
-        <img src={tech.logo} alt={tech.name} className={styles.techLogo} />
-      );
+      return <img src={tech.logo} alt={tech.name} className={styles.techLogo} />;
     }
-    // Otherwise use FontAwesome icon with explicit color
-    if (tech.icon) {
-      return (
-        <FontAwesomeIcon
-          icon={tech.icon}
-          style={{ color: getIconColor(tech.icon) }}
-        />
-      );
-    }
-    return null;
+    // Use a colored dot for tech without logos
+    return <span style={{ color: iconColors[tech.iconText] || "#555" }}>{tech.iconText && '•'}</span>;
   };
 
   return (

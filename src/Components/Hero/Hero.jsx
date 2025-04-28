@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./HeroStyles.module.css";
 import linkedin_icon from "../../assets/linkedin_icon.png";
 import github_icon from "../../assets/github_icon.png";

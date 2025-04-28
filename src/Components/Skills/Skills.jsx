@@ -1,3 +1,4 @@
+import React from "react";
 import styles from "./SkillsStyles.module.css";
 import checkMarkIcon from "../../assets/checkmark.png";
 import SkillList from "./SkillList";
