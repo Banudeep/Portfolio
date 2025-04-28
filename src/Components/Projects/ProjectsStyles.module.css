@@ -196,3 +196,31 @@
 .fa-gears {
   color: #6c757d; /* Gray */
 }
+
+/* View All Projects button styles */
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: #333;
+  color: white !important;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  width: auto !important;
+}
+
+.viewAllButton:hover {
+  background-color: #555;
+  transform: translateY(-3px) !important;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}

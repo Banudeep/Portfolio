@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 60px 0;
+  min-height: 100vh;
+  background-color: #fafafa;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+  position: relative;
+  width: 100%;
+}
+
+.header h1 {
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.backButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  background-color: #f0f0f0;
+  border-radius: 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s ease;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.projectsContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  max-width: 1500px;
+  margin: 0 auto;
+  width: 100%;
+  padding: 0 20px;
+}
+
+/* Use the same ProjectCard styling as in main page */
+.projectCard {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  top: 0;
+}
+
+@media (width >= 768px) {
+  .projectsContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+  }
+
+  .projectsContainer > div {
+    width: calc(50% - 20px);
+    max-width: 450px;
+  }
+}
+
+@media (width >= 1200px) {
+  .projectsContainer > div {
+    width: calc(33.33% - 20px);
+    max-width: 400px;
+  }
+}
