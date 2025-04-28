@@ -17,7 +17,10 @@ function Hero() {
             Banudeep Reddy <br></br>Gade
           </h1>
           <h2>Software Engineer</h2>
-          <p>One liner summary</p>
+          <p>
+            Passionate about building scalable, data-driven solutions using
+            full-stack development, cloud technologies, and AI integration.
+          </p>
 
           <span>
             <a
