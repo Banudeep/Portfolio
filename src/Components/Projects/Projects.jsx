@@ -80,7 +80,7 @@ function Projects() {
         ))}
       </div>
       <div className={styles.viewAllContainer}>
-        <a href="/#/projects" className={styles.viewAllButton}>
+        <a href="index.html#/projects" className={styles.viewAllButton}>
           View All Projects <FontAwesomeIcon icon={faArrowRight} />
         </a>
       </div>

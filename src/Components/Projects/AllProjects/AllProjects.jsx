@@ -155,7 +155,7 @@ function AllProjects() {
   return (
     <section className={styles.container}>
       <div className={styles.header}>
-        <a href="/#/" className={styles.backButton}>
+        <a href="index.html#/" className={styles.backButton}>
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Home
         </a>
         <h1>All Projects</h1>

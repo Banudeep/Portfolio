@@ -10,20 +10,17 @@ import AllProjects from "./Components/Projects/AllProjects/AllProjects";
 
 function App() {
   return (
-    <HashRouter>
+    <HashRouter basename="/">
       <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Navbar />
-              <Hero />
-              <Projects />
-              <Skills />
-              <Footer />
-            </>
-          }
-        />
+        <Route path="/" element={
+          <>
+            <Navbar />
+            <Hero />
+            <Projects />
+            <Skills />
+            <Footer />
+          </>
+        } />
         <Route path="/projects" element={<AllProjects />} />
       </Routes>
     </HashRouter>
