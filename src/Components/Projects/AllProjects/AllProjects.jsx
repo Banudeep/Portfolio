@@ -26,7 +26,7 @@ import {
   faLock,
   faBoxOpen,
   faChartLine,
-  faToolbox
+  faToolbox,
 } from "@fortawesome/free-solid-svg-icons";
 import github_icon from "../../../assets/github_icon.png";
 import zentrail from "../../../assets/zentrail.png";
@@ -77,11 +77,12 @@ function AllProjects() {
         { name: "Java", icon: faJava },
       ],
     },
-    
+
     // Additional projects
     {
       title: "Portfolio Website",
-      description: "A responsive personal portfolio built with React and Vite, featuring a clean UI, dynamic project showcases, and smooth animations.",
+      description:
+        "A responsive personal portfolio built with React and Vite, featuring a clean UI, dynamic project showcases, and smooth animations.",
       image: github_icon,
       link: "https://github.com/Banudeep/Portfolio",
       techStack: [
@@ -92,7 +93,8 @@ function AllProjects() {
     },
     {
       title: "Cloud Data Pipeline",
-      description: "An automated ETL pipeline using AWS services for real-time data processing, analytics, and visualization. Processes large datasets from multiple sources for business intelligence.",
+      description:
+        "An automated ETL pipeline using AWS services for real-time data processing, analytics, and visualization. Processes large datasets from multiple sources for business intelligence.",
       image: github_icon,
       link: "https://github.com/Banudeep/cloud-data-pipeline",
       techStack: [
@@ -104,7 +106,8 @@ function AllProjects() {
     },
     {
       title: "Computer Vision Project",
-      description: "A deep learning computer vision system that analyzes images to detect and classify objects in real-time, with applications in security monitoring and retail analytics.",
+      description:
+        "A deep learning computer vision system that analyzes images to detect and classify objects in real-time, with applications in security monitoring and retail analytics.",
       image: github_icon,
       link: "https://github.com/Banudeep/cv-object-detection",
       techStack: [
@@ -116,7 +119,8 @@ function AllProjects() {
     },
     {
       title: "E-Commerce Backend",
-      description: "A scalable backend system for e-commerce platforms, featuring user authentication, product management, order processing, and payment integration.",
+      description:
+        "A scalable backend system for e-commerce platforms, featuring user authentication, product management, order processing, and payment integration.",
       image: github_icon,
       link: "https://github.com/Banudeep/ecommerce-api",
       techStack: [
@@ -128,7 +132,8 @@ function AllProjects() {
     },
     {
       title: "Mobile Fitness Tracker",
-      description: "A cross-platform mobile application that tracks workouts, nutrition, and progress with personalized recommendations and social features.",
+      description:
+        "A cross-platform mobile application that tracks workouts, nutrition, and progress with personalized recommendations and social features.",
       image: github_icon,
       link: "https://github.com/Banudeep/fitness-tracker",
       techStack: [
@@ -140,7 +145,8 @@ function AllProjects() {
     },
     {
       title: "DevOps Automation Toolkit",
-      description: "A suite of tools for automating CI/CD pipelines, infrastructure management, and deployment processes to improve development workflow efficiency.",
+      description:
+        "A suite of tools for automating CI/CD pipelines, infrastructure management, and deployment processes to improve development workflow efficiency.",
       image: github_icon,
       link: "https://github.com/Banudeep/devops-toolkit",
       techStack: [

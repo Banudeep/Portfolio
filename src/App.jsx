@@ -12,15 +12,18 @@ function App() {
   return (
     <HashRouter basename="/">
       <Routes>
-        <Route path="/" element={
-          <>
-            <Navbar />
-            <Hero />
-            <Projects />
-            <Skills />
-            <Footer />
-          </>
-        } />
+        <Route
+          path="/"
+          element={
+            <>
+              <Navbar />
+              <Hero />
+              <Projects />
+              <Skills />
+              <Footer />
+            </>
+          }
+        />
         <Route path="/projects" element={<AllProjects />} />
       </Routes>
     </HashRouter>
