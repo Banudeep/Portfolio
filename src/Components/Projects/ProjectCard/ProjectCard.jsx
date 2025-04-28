@@ -1,18 +1,7 @@
 import React from "react";
 import styles from "../ProjectsStyles.module.css";
 import github_icon from "../../../assets/github_icon.png";
-
-// Icon color mapping using simpler structure
-const iconColors = {
-  react: "#61DAFB", // React blue
-  "map-location-dot": "#4285F4", // Google blue
-  bolt: "#009688", // FastAPI teal
-  aws: "#FF9900", // AWS orange
-  database: "#4479A1", // MySQL blue
-  key: "#F7DF1E", // JWT yellow
-  code: "#2F4F4F", // Dark slate gray
-  gears: "#6C757D", // Gray
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const ProjectCard = ({ project }) => {
   // Function to handle image load errors
@@ -23,12 +12,17 @@ const ProjectCard = ({ project }) => {
 
   // Function to render a tech icon or logo
   const renderTechIcon = (tech) => {
+    // If we have a FontAwesome icon
+    if (tech.icon) {
+      return <FontAwesomeIcon icon={tech.icon} className={styles.techIcon} />;
+    }
     // If we have a custom logo image for this tech
     if (tech.logo) {
-      return <img src={tech.logo} alt={tech.name} className={styles.techLogo} />;
+      return (
+        <img src={tech.logo} alt={tech.name} className={styles.techLogo} />
+      );
     }
-    // Use a colored dot for tech without logos
-    return <span style={{ color: iconColors[tech.iconText] || "#555" }}>{tech.iconText && '•'}</span>;
+    return null;
   };
 
   return (
@@ -53,7 +47,7 @@ const ProjectCard = ({ project }) => {
           <p>{project.description}</p>
           <div className={styles.techStack}>
             {project.techStack.map((tech, index) => (
-              <span key={index}>
+              <span key={index} className={styles.techItem}>
                 {renderTechIcon(tech)} {tech.name}
               </span>
             ))}
