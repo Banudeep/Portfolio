@@ -2,61 +2,121 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 60px 0;
-  min-height: 100vh;
-  background-color: #fafafa;
+  padding: 100px 5% 80px;
+  max-width: 1400px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 .header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   position: relative;
   width: 100%;
 }
 
 .header h1 {
-  margin-bottom: 1rem;
-  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  font-size: 2.5rem;
+  font-weight: 700;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  position: relative;
+}
+
+.header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  border-radius: 2px;
+}
+
+.header p {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #666;
+  line-height: 1.6;
 }
 
 .backButton {
   display: flex;
   align-items: center;
   gap: 8px;
-  padding: 8px 16px;
-  background-color: #f0f0f0;
-  border-radius: 20px;
+  padding: 10px 18px;
+  background-color: #f8f8f8;
+  border-radius: 25px;
   color: #333;
   text-decoration: none;
-  font-size: 0.9rem;
-  transition: all 0.2s ease;
-  margin-bottom: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+  border: 1px solid #eaeaea;
+  position: absolute;
+  left: 0;
+  top: 0;
 }
 
 .backButton:hover {
-  background-color: #e0e0e0;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-color: #f0f0f0;
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+.filterContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.filterButton {
+  padding: 8px 16px;
+  background-color: #f8f8f8;
+  border: 1px solid #eaeaea;
+  border-radius: 20px;
+  color: #555;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.filterButton:hover {
+  background-color: #f0f0f0;
+}
+
+.filterButton.active {
+  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  color: white;
+  border: 1px solid transparent;
 }
 
 .projectsContainer {
+  grid-template-columns: repeat(3, 1fr);
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
   max-width: 1500px;
   margin: 0 auto;
   width: 100%;
-  padding: 0 20px;
+  padding: 0 5px;
 }
 
-/* Use the same ProjectCard styling as in main page */
 .projectCard {
   width: 100%;
-  max-width: 600px;
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -66,23 +126,37 @@
   top: 0;
 }
 
-@media (width >= 768px) {
-  .projectsContainer {
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 30px;
-  }
-
-  .projectsContainer > div {
-    width: calc(50% - 20px);
-    max-width: 450px;
-  }
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
 }
 
-@media (width >= 1200px) {
-  .projectsContainer > div {
-    width: calc(33.33% - 20px);
-    max-width: 400px;
+.noProjects {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+  color: #666;
+  border-radius: 12px;
+  border: 2px dashed #ddd;
+  margin: 20px auto;
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 80px 4% 60px;
+  }
+
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .projectsContainer {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+  }
+
+  .backButton {
+    position: relative;
+    margin-bottom: 20px;
   }
 }

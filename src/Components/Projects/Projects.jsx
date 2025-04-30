@@ -5,6 +5,7 @@ import zentrail from "../../assets/zentrail.png";
 import sos_app from "../../assets/sos-app.png";
 import campus_feedback from "../../assets/campus_feedback.png";
 import ProjectCard from "./ProjectCard/ProjectCard";
+import { Link } from "react-router-dom";
 
 // Import FontAwesome icons
 import {
@@ -80,9 +81,9 @@ function Projects() {
         ))}
       </div>
       <div className={styles.viewAllContainer}>
-        <a href="index.html#/projects" className={styles.viewAllButton}>
+        <Link to="/projects" className={styles.viewAllButton}>
           View All Projects <FontAwesomeIcon icon={faArrowRight} />
-        </a>
+        </Link>
       </div>
     </section>
   );

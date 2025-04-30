@@ -1,7 +1,8 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./AllProjectsStyles.module.css";
 import ProjectCard from "../ProjectCard/ProjectCard";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 import {
   faReact,
   faAws,
@@ -32,8 +33,14 @@ import github_icon from "../../../assets/github_icon.png";
 import zentrail from "../../../assets/zentrail.png";
 import sos_app from "../../../assets/sos-app.png";
 import campus_feedback from "../../../assets/campus_feedback.png";
+import fraudsense from "../../../assets/fraudsense.png";
 
 function AllProjects() {
+  // Scroll to top when component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   // All projects data array - includes projects from the main page plus additional ones
   const allProjectsData = [
     // Original projects from main page
@@ -92,16 +99,17 @@ function AllProjects() {
       ],
     },
     {
-      title: "Cloud Data Pipeline",
+      title: "Fraud Sense",
       description:
-        "An automated ETL pipeline using AWS services for real-time data processing, analytics, and visualization. Processes large datasets from multiple sources for business intelligence.",
-      image: github_icon,
-      link: "https://github.com/Banudeep/cloud-data-pipeline",
+        "A real-time fraud detection system built using AWS, Databricks, and ML models to process financial transactions, reduce false positives, and automate fraud alerts.",
+      image: fraudsense, // replace with your image import
+      link: "https://devpost.com/software/finshieldai",
       techStack: [
-        { name: "AWS Lambda", icon: faAws },
-        { name: "DynamoDB", icon: faDatabase },
         { name: "Python", icon: faPython },
-        { name: "S3", icon: faBoxOpen },
+        { name: "FastAPI", icon: faCode },
+        { name: "MongoDB", icon: faDatabase },
+        { name: "OpenAI API", icon: faRobot },
+        { name: "Streamlit", icon: faChartLine },
       ],
     },
     {
@@ -161,9 +169,9 @@ function AllProjects() {
   return (
     <section className={styles.container}>
       <div className={styles.header}>
-        <a href="index.html#/" className={styles.backButton}>
+        <Link to="/" state={{ section: "Hero" }} className={styles.backButton}>
           <FontAwesomeIcon icon={faArrowLeft} /> Back to Home
-        </a>
+        </Link>
         <h1>All Projects</h1>
       </div>
       <div className={styles.projectsContainer}>
