@@ -12,6 +12,13 @@ import {
   faJs,
   faNode,
   faVuejs,
+  faHtml5,
+  faCss3,
+  faPython as faPythonIcon,
+  faChrome,
+  faGoogle,
+  // faGemini,
+  // faFastapi,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faMapLocationDot,
@@ -24,16 +31,25 @@ import {
   faArrowLeft,
   faServer,
   faMobile,
+  faFire,
   faLock,
+  faProjectDiagram,
   faBoxOpen,
   faChartLine,
-  faToolbox,
+  faChartBar,
+  // faHtml5,
+  // faCss3,
+  // faJsSquare,
+  faSearch,
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons";
 import github_icon from "../../../assets/github_icon.png";
 import zentrail from "../../../assets/zentrail.png";
 import sos_app from "../../../assets/sos-app.png";
 import campus_feedback from "../../../assets/campus_feedback.png";
 import fraudsense from "../../../assets/fraudsense.png";
+import portfolio from "../../../assets/portfolio.png";
+import medifact from "../../../assets/medifact.png";
 
 function AllProjects() {
   // Scroll to top when component mounts
@@ -52,7 +68,11 @@ function AllProjects() {
       link: "https://github.com/Banudeep/zentrail_bitcamp",
       techStack: [
         { name: "React", icon: faReact },
-        { name: "Google Maps", icon: faMapLocationDot },
+        { name: "Leaflet", icon: faMapLocationDot },
+        { name: "Node.js", icon: faNode },
+        { name: "Express", icon: faServer },
+        { name: "FastAPI", icon: faCode },
+        { name: "MongoDB", icon: faDatabase },
       ],
     },
     {
@@ -62,11 +82,29 @@ function AllProjects() {
       image: sos_app,
       link: "https://github.com/Banudeep/SOS-app",
       techStack: [
+        { name: "React", icon: faReact },
         { name: "FastAPI", icon: faCode },
-        { name: "MongoDB", icon: faDatabase },
         { name: "Google Gemini API", icon: faRobot },
         { name: "OpenCV", icon: faCamera },
-        { name: "Python", icon: faPython },
+        { name: "MongoDB", icon: faDatabase },
+        // { name: "Python", icon: faPython },
+      ],
+    },
+    {
+      title: "MediFact",
+      description:
+        "A Chrome extension that summarizes health content, verifies medical claims using AI, and explains complex terms with real-time glossary lookups.",
+      image: medifact, // use your imported asset like: import medifact from "../assets/medifact.png"
+      link: "https://devpost.com/software/medifact", // or GitHub if available
+      techStack: [
+        { name: "Manifest V3, Chrome Extension", icon: faChrome },
+        // { name: "JavaScript", icon: faJs },
+        // { name: "HTML", icon: faHtml5 },
+        // { name: "CSS", icon: faCss3 },
+        { name: "FastAPI", icon: faCode },
+        { name: "Gemini API", icon: faRobot },
+        { name: "Google Fact Check API", icon: faSearch },
+        { name: "BioBERT", icon: faBrain },
       ],
     },
     {
@@ -78,10 +116,10 @@ function AllProjects() {
       techStack: [
         { name: "Angular", icon: faAngular },
         { name: "Spring Boot", icon: faLeaf },
+        { name: "Java", icon: faJava },
         { name: "AWS EC2", icon: faCloud },
         { name: "AWS RDS", icon: faDatabase },
         { name: "MySQL", icon: faDatabase },
-        { name: "Java", icon: faJava },
       ],
     },
 
@@ -90,7 +128,7 @@ function AllProjects() {
       title: "Portfolio Website",
       description:
         "A responsive personal portfolio built with React and Vite, featuring a clean UI, dynamic project showcases, and smooth animations.",
-      image: github_icon,
+      image: portfolio,
       link: "https://github.com/Banudeep/Portfolio",
       techStack: [
         { name: "React", icon: faReact },
@@ -105,63 +143,42 @@ function AllProjects() {
       image: fraudsense, // replace with your image import
       link: "https://devpost.com/software/finshieldai",
       techStack: [
+        { name: "AWS", icon: faAws },
+        { name: "Databricks", icon: faCloud },
         { name: "Python", icon: faPython },
         { name: "FastAPI", icon: faCode },
-        { name: "MongoDB", icon: faDatabase },
+        { name: "DynamoDB", icon: faDatabase },
+        { name: "S3", icon: faDatabase },
         { name: "OpenAI API", icon: faRobot },
-        { name: "Streamlit", icon: faChartLine },
       ],
     },
     {
-      title: "Computer Vision Project",
+      title: "PASCAL VOC Multi-Label Classifier",
       description:
-        "A deep learning computer vision system that analyzes images to detect and classify objects in real-time, with applications in security monitoring and retail analytics.",
-      image: github_icon,
-      link: "https://github.com/Banudeep/cv-object-detection",
+        "Implemented a PyTorch-based image classifier to detect multiple object categories per image in the PASCAL VOC 2007 dataset using FCN and CNN architectures.",
+      image: github_icon, // import like: import pascal_classifier from "../assets/pascal_classifier.png"
+      link: "https://github.com/Banudeep/pascal-voc-multilabel", // replace with your GitHub repo if different
       techStack: [
-        { name: "TensorFlow", icon: faCode },
+        { name: "PyTorch", icon: faFire },
         { name: "Python", icon: faPython },
-        { name: "OpenCV", icon: faCamera },
-        { name: "NumPy", icon: faChartLine },
+        { name: "CNN", icon: faBrain },
+        { name: "FCN", icon: faProjectDiagram },
+        { name: "Google Colab", icon: faGoogle },
+        { name: "Matplotlib", icon: faChartBar },
       ],
     },
     {
-      title: "E-Commerce Backend",
+      title: "ASL Translator",
       description:
-        "A scalable backend system for e-commerce platforms, featuring user authentication, product management, order processing, and payment integration.",
-      image: github_icon,
-      link: "https://github.com/Banudeep/ecommerce-api",
-      techStack: [
-        { name: "Node.js", icon: faNode },
-        { name: "Express", icon: faServer },
-        { name: "MongoDB", icon: faDatabase },
-        { name: "JWT", icon: faLock },
-      ],
-    },
-    {
-      title: "Mobile Fitness Tracker",
-      description:
-        "A cross-platform mobile application that tracks workouts, nutrition, and progress with personalized recommendations and social features.",
+        "A real-time American Sign Language (ASL) translator using computer vision and deep learning, enabling seamless communication for the hearing impaired.",
       image: github_icon,
       link: "https://github.com/Banudeep/fitness-tracker",
       techStack: [
-        { name: "React Native", icon: faReact },
-        { name: "Firebase", icon: faDatabase },
-        { name: "JavaScript", icon: faJs },
-        { name: "Mobile APIs", icon: faMobile },
-      ],
-    },
-    {
-      title: "DevOps Automation Toolkit",
-      description:
-        "A suite of tools for automating CI/CD pipelines, infrastructure management, and deployment processes to improve development workflow efficiency.",
-      image: github_icon,
-      link: "https://github.com/Banudeep/devops-toolkit",
-      techStack: [
-        { name: "Docker", icon: faBoxOpen },
-        { name: "Kubernetes", icon: faCloud },
-        { name: "Python", icon: faPython },
-        { name: "Bash", icon: faToolbox },
+        { name: "OpenCV", icon: faCamera },
+        { name: "TensorFlow", icon: faCode },
+        { name: "Python", icon: faPythonIcon },
+        { name: "NumPy", icon: faChartLine },
+        { name: "Flask", icon: faCode },
       ],
     },
   ];

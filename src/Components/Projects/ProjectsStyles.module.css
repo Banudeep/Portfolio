@@ -50,14 +50,19 @@
   transform: translateY(-8px);
 }
 
-.projectCard a {
-  display: block;
-  height: 100%;
-  width: 100%;
-}
-
-.projectCard a:hover {
-  text-decoration: none;
+.projectCard a,
+.projectCard a:visited,
+.projectCard a:active,
+.projectCard a:hover,
+.projectInfo h3,
+.projectInfo h3 a,
+.projectInfo h3 a:visited,
+.projectInfo h3 a:active,
+.projectInfo h3 a:hover {
+  text-decoration: none !important;
+  border-bottom: none !important;
+  box-shadow: none !important;
+  outline: none !important;
 }
 
 .projectImage {
@@ -78,6 +83,8 @@
 .projectInfo {
   padding: 20px;
   text-align: left;
+  text-decoration: none;
+  border-bottom: none;
 }
 
 .projectInfo h3 {

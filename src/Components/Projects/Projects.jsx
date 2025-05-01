@@ -3,6 +3,7 @@ import styles from "./ProjectsStyles.module.css";
 import github_icon from "../../assets/github_icon.png";
 import zentrail from "../../assets/zentrail.png";
 import sos_app from "../../assets/sos-app.png";
+import medifact from "../../assets/medifact.png";
 import campus_feedback from "../../assets/campus_feedback.png";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { Link } from "react-router-dom";
@@ -14,6 +15,15 @@ import {
   faPython,
   faAngular,
   faJava,
+  faJs,
+  faNode,
+  faVuejs,
+  faHtml5,
+  faCss3,
+  faPython as faPythonIcon,
+  faChrome,
+  // faGemini,
+  // faFastapi,
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faMapLocationDot,
@@ -23,7 +33,18 @@ import {
   faCamera,
   faLeaf,
   faCloud,
+  faArrowLeft,
+  faServer,
+  faMobile,
+  faLock,
+  faBoxOpen,
+  faChartLine,
+  // faHtml5,
+  // faCss3,
+  // faJsSquare,
+  faSearch,
   faArrowRight,
+  faBrain,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
@@ -38,7 +59,11 @@ function Projects() {
       link: "https://github.com/Banudeep/zentrail_bitcamp",
       techStack: [
         { name: "React", icon: faReact },
-        { name: "Google Maps", icon: faMapLocationDot },
+        { name: "Leaflet", icon: faMapLocationDot },
+        { name: "Node.js", icon: faNode },
+        { name: "Express", icon: faServer },
+        { name: "FastAPI", icon: faCode },
+        { name: "MongoDB", icon: faDatabase },
       ],
     },
     {
@@ -48,26 +73,29 @@ function Projects() {
       image: sos_app,
       link: "https://github.com/Banudeep/SOS-app",
       techStack: [
+        { name: "React", icon: faReact },
         { name: "FastAPI", icon: faCode },
-        { name: "MongoDB", icon: faDatabase },
         { name: "Google Gemini API", icon: faRobot },
         { name: "OpenCV", icon: faCamera },
-        { name: "Python", icon: faPython },
+        { name: "MongoDB", icon: faDatabase },
+        // { name: "Python", icon: faPython },
       ],
     },
     {
-      title: "Campus Feedback Survey System",
+      title: "MediFact",
       description:
-        "A full-stack feedback management platform built with Angular and Spring Boot, featuring real-time survey submissions, secure AWS deployment, and MySQL storage on AWS RDS.",
-      image: campus_feedback,
-      link: "https://github.com/Banudeep/Campus-Feedback-Survey-System-Angular-Full-Stack-Web-Application",
+        "A Chrome extension that summarizes health content, verifies medical claims using AI, and explains complex terms with real-time glossary lookups.",
+      image: medifact, // use your imported asset like: import medifact from "../assets/medifact.png"
+      link: "https://devpost.com/software/medifact", // or GitHub if available
       techStack: [
-        { name: "Angular", icon: faAngular },
-        { name: "Spring Boot", icon: faLeaf },
-        { name: "AWS EC2", icon: faCloud },
-        { name: "AWS RDS", icon: faDatabase },
-        { name: "MySQL", icon: faDatabase },
-        { name: "Java", icon: faJava },
+        { name: "Manifest V3, Chrome Extension", icon: faChrome },
+        // { name: "JavaScript", icon: faJs },
+        // { name: "HTML", icon: faHtml5 },
+        // { name: "CSS", icon: faCss3 },
+        { name: "FastAPI", icon: faCode },
+        { name: "Gemini API", icon: faRobot },
+        { name: "Google Fact Check API", icon: faSearch },
+        { name: "BioBERT", icon: faBrain },
       ],
     },
   ];
