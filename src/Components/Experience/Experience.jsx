@@ -1,77 +1,100 @@
 import React from "react";
 import styles from "./ExperienceStyles.module.css";
+import gmuLogo from "../../assets/tech-logos/Header_logo_George-Mason-University-2024_0.png";
+import persistentLogo from "../../assets/tech-logos/persistent-systems-seeklogo.png";
+import vsoftLogo from "../../assets/tech-logos/vsoft.webp";
+import profilePic from "../../assets/banudeep_picture.jpeg";
+
+const experiences = [
+  {
+    company: "George Mason University",
+    logo: gmuLogo,
+    role: "Graduate Research Assistant",
+    location: "Fairfax, VA",
+    dates: "Aug 2024 – May 2025",
+    description: [
+      "Developed high-performance web scraping tools using Python and Selenium, leveraging threading to efficiently collect over 1 million data points. These tools supported enhanced statistical analysis and improved data quality across projects. I also designed and managed an experimental web platform integrating GPT to conduct over 500 pre- and post-treatment surveys, boosting insight accuracy and experimental rigor. Through collaboration on over five research projects, I strengthened data analysis workflows and implemented advanced AI technologies for scalable, research-driven solutions.",
+    ],
+    tech: [
+      "Python",
+      "Selenium",
+      "Threading",
+      "GPT",
+      "Web Development",
+      "Data Analysis",
+    ],
+    picture: profilePic,
+  },
+  {
+    company: "Persistent Systems Limited",
+    logo: persistentLogo,
+    role: "Software Engineer",
+    location: "Hyderabad, India",
+    dates: "Jun 2022 – Jul 2023",
+    description: [
+      "Designed and implemented stored procedures and SQL queries to migrate data from client databases to Google BigQuery using DBT Cloud, managing over 50 database pipelines. To ensure accuracy, I developed Python scripts that automated data verification, reducing manual checks by 40%. I also prepared detailed reports and offered technical recommendations that improved project workflows and tool efficiency. These efforts contributed to streamlined data operations and enhanced data integrity across multiple client environments.",
+    ],
+    tech: ["SQL", "BigQuery", "DBT Cloud", "Python", "Google Cloud Platform"],
+    picture: profilePic,
+  },
+  {
+    company: "Vsoft Technologies Pvt Ltd",
+    logo: vsoftLogo,
+    role: "Software Engineer Intern",
+    location: "Hyderabad, India",
+    dates: "Jun 2020 – Jul 2020",
+    description: [
+      "Developed a data extraction system using OpenCV and Python to process over 1,000 nationally issued identification cards. The system automated image preprocessing and text recognition, significantly improving efficiency. I also implemented validation algorithms to verify data accuracy, achieving a validation success rate exceeding 95%. This project demonstrated strong skills in computer vision, data quality assurance, and automation.",
+    ],
+    tech: ["OpenCV", "Python", "Data Extraction", "Validation Algorithms"],
+    picture: profilePic,
+  },
+];
 
 const Experience = () => (
   <section id="Experience" className={styles.experienceSection}>
-    <h1 className={styles.heading}>Experience</h1>
-    <div className={styles.experienceList}>
-      <div className={styles.experienceItem}>
-        <div className={styles.roleHeader}>
-          <span className={styles.company}>George Mason University</span>
-          <span className={styles.location}>Fairfax, VA</span>
-          <span className={styles.dates}>Aug 2024 - May 2025</span>
+    <h1>Experience</h1>
+    <div className={styles.cardContainer}>
+      {experiences.map((exp, idx) => (
+        <div className={styles.cardRow} key={exp.company}>
+          <div className={styles.logoCard}>
+            <img
+              src={exp.logo}
+              alt={exp.company + " logo"}
+              className={styles.companyLogo}
+            />
+          </div>
+          <div className={styles.card}>
+            <div className={styles.infoCol}>
+              <div className={styles.companyRow}>
+                <span className={styles.company}>{exp.company}</span>
+                <span className={styles.role}>{exp.role}</span>
+              </div>
+              <div className={styles.dateRow}>
+                <span>{exp.location}</span>
+                <span className={styles.dates}>{exp.dates}</span>
+              </div>
+              <div className={styles.description}>
+                {Array.isArray(exp.description)
+                  ? exp.description.map((d, i) => (
+                      <span key={i}>
+                        {d}
+                        {i !== exp.description.length - 1 && <br />}
+                      </span>
+                    ))
+                  : exp.description}
+              </div>
+              <div className={styles.techRow}>
+                {exp.tech.map((t) => (
+                  <span className={styles.techTag} key={t}>
+                    {t}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
-        <div className={styles.position}>Graduate Research Assistant</div>
-        <ul className={styles.responsibilities}>
-          <li>
-            Developed web scraping tools using Python and Selenium,
-            incorporating threading to enhance performance and collect over 1
-            million data points for improved statistical analysis quality.
-          </li>
-          <li>
-            Designed and managed an experimental website integrating GPT to
-            conduct over 500 pre and post-treatment surveys, significantly
-            improving experimental accuracy and insight generation.
-          </li>
-          <li>
-            Collaborated on 5+ research projects, significantly enhancing data
-            analysis capabilities and integrating advanced AI technologies.
-          </li>
-        </ul>
-      </div>
-      <div className={styles.experienceItem}>
-        <div className={styles.roleHeader}>
-          <span className={styles.company}>Persistent Systems Limited</span>
-          <span className={styles.location}>Hyderabad, India</span>
-          <span className={styles.dates}>Jun 2022 - Jul 2023</span>
-        </div>
-        <div className={styles.position}>Software Engineer</div>
-        <ul className={styles.responsibilities}>
-          <li>
-            Designed and implemented stored procedures and custom SQL queries
-            for migrating data from client databases to Google Cloud Platform’s
-            BigQuery using DBT Cloud, handling over 50 client databases.
-          </li>
-          <li>
-            Developed Python scripts to automate the verification of migrated
-            data, enhancing data integrity and reducing manual checking by 40%.
-          </li>
-          <li>
-            Prepared and delivered comprehensive reports and provided
-            recommendations that improved processes and utilization of technical
-            tools across projects.
-          </li>
-        </ul>
-      </div>
-
-      <div className={styles.experienceItem}>
-        <div className={styles.roleHeader}>
-          <span className={styles.company}>Vsoft Technologies Pvt Ltd</span>
-          <span className={styles.location}>Hyderabad, India</span>
-          <span className={styles.dates}>Jun 2020 - Jul 2020</span>
-        </div>
-        <div className={styles.position}>Software Engineer Intern</div>
-        <ul className={styles.responsibilities}>
-          <li>
-            Developed a data extraction project utilizing OpenCV and Python to
-            process over 1,000 nationally issued identification cards.
-          </li>
-          <li>
-            Implemented validation algorithms to verify the accuracy of
-            extracted data, achieving a validation success rate of over 95%.
-          </li>
-        </ul>
-      </div>
+      ))}
     </div>
   </section>
 );

@@ -88,6 +88,23 @@ function Navbar() {
         <li>
           {isHomePage ? (
             <a
+              href="#Experience"
+              onClick={(e) => {
+                e.preventDefault();
+                scrollToSection("Experience");
+              }}
+            >
+              Experience
+            </a>
+          ) : (
+            <Link to="/" state={{ section: "Experience" }}>
+              Experience
+            </Link>
+          )}
+        </li>
+        <li>
+          {isHomePage ? (
+            <a
               href="#contact"
               onClick={(e) => {
                 e.preventDefault();

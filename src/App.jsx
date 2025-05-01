@@ -40,6 +40,7 @@ function HomePage() {
       <Hero />
       <Projects />
       <Skills />
+      <br />
       <Experience />
       <Footer />
     </>
