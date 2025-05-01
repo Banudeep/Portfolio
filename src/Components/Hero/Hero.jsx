@@ -22,7 +22,14 @@ function Hero() {
             Passionate about building scalable, data-driven solutions using
             full-stack development, cloud technologies, and AI integration.
           </p>
-
+          <span className={styles.email}>
+            <img
+              src="https://img.icons8.com/color/48/000000/gmail-new.png"
+              alt="Gmail"
+              className={styles.gmailIcon}
+            />
+            <span className={styles.emailText}>banudeepreddy@gmail.com</span>
+          </span>
           <span>
             <a
               href="https://www.linkedin.com/in/banudeep-reddy-gade-118013212/"
@@ -38,7 +45,8 @@ function Hero() {
             {/* <a href="../../assets/" download="Banudeep_Reddy_Resume.pdf"> */}
             <a
               href="Banudeep_Reddy_Resume.pdf"
-              download="Banudeep_Reddy_Resume.pdf"
+              target="_blank"
+              // download="Banudeep_Reddy_Resume.pdf"
             >
               Resume
             </a>

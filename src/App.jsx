@@ -7,6 +7,8 @@ import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Footer from "./Components/Footer/Footer";
 import AllProjects from "./Components/Projects/AllProjects/AllProjects";
+import SkillsPage from "./Components/Skills/SkillsPage";
+import Experience from "./Components/Experience/Experience";
 
 // This component handles scrolling to sections when navigating from other pages
 function ScrollHandler() {
@@ -38,6 +40,7 @@ function HomePage() {
       <Hero />
       <Projects />
       <Skills />
+      <Experience />
       <Footer />
     </>
   );
@@ -58,6 +61,7 @@ function App() {
             </>
           }
         />
+        <Route path="/skills" element={<SkillsPage />} />
       </Routes>
     </HashRouter>
   );

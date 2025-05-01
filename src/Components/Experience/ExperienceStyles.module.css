@@ -1,0 +1,65 @@
+.experienceSection {
+  padding: 40px 0;
+  /* background: #f9f9f9; */
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 3rem;
+  position: relative;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+}
+.experienceList {
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.experienceItem {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  padding: 24px 28px;
+}
+.roleHeader {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.company {
+  font-weight: 600;
+  font-size: 1.1rem;
+  color: #0073b1;
+}
+.location {
+  font-size: 1rem;
+  color: #666;
+}
+.dates {
+  font-size: 0.95rem;
+  color: #888;
+}
+.position {
+  font-size: 1.05rem;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #333;
+}
+.responsibilities {
+  margin: 0;
+  padding-left: 20px;
+  color: #444;
+  font-size: 0.98rem;
+  line-height: 1.6;
+}

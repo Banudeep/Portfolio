@@ -1,0 +1,118 @@
+.organizedSkillsSection {
+  background: linear-gradient(120deg, #f8fafc 0%, #e0e7ef 100%);
+  min-height: 100vh;
+  padding: 48px 0 64px 0;
+}
+
+.organizedSkillsTitle {
+  text-align: center;
+  font-size: 2.6rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  color: #22223b;
+  letter-spacing: 1px;
+}
+
+.organizedCategoriesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 2.5rem 0;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.organizedCategoryCard {
+  flex: 1 1 45%;
+  max-width: 48%;
+  min-width: 420px;
+  margin: 0 0.5rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(30, 34, 90, 0.08);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.2s;
+  width: 100%;
+}
+.organizedCategoryCard:hover {
+  box-shadow: 0 8px 32px rgba(30, 34, 90, 0.13);
+}
+
+.organizedCategoryTitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #3a3a5a;
+  margin-bottom: 1.2rem;
+  letter-spacing: 0.5px;
+}
+
+.organizedSkillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+  gap: 1.2rem 1.2rem;
+  width: 100%;
+}
+
+.organizedSkillItem {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #f3f6fa;
+  border-radius: 12px;
+  padding: 18px 8px 10px 8px;
+  box-shadow: 0 1px 4px rgba(30, 34, 90, 0.04);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+  cursor: pointer;
+  min-width: 110px;
+  min-height: 120px;
+  max-width: 140px;
+  max-height: 140px;
+  justify-content: center;
+}
+.organizedSkillItem:hover {
+  background: #e0e7ef;
+  box-shadow: 0 4px 12px rgba(30, 34, 90, 0.1);
+  transform: translateY(-3px) scale(1.04);
+}
+
+.organizedSkillIconWrapper {
+  /* Remove background and border-radius for no circular background */
+  background: none;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.organizedSkillIcon {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+}
+
+.organizedSkillName {
+  font-size: 1rem;
+  color: #2d3142;
+  font-weight: 500;
+  margin-top: 0.2rem;
+  text-align: center;
+}
+
+@media (max-width: 900px) {
+  .organizedCategoryCard {
+    flex-basis: 100%;
+    max-width: 100%;
+    min-width: 0;
+    margin: 0 0 2rem 0;
+  }
+  .organizedCategoriesGrid {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+}
