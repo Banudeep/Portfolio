@@ -45,7 +45,8 @@
   }
   .resume {
     margin-top: 20px;
-    background-color: var(--secondary-color);
+    background-color: var(--btn-color);
+    color: var(--btn-text-color) !important;
     border: none;
     padding: 15px 32px;
     display: inline-block;
@@ -54,15 +55,24 @@
     transition: transform 200ms ease-in-out, background-color 200ms ease;
 
     a {
-      color: var(--background-color);
+      color: var(--btn-text-color);
+      /* background-color: var(--btn-text-color) !important; */
       text-decoration: none;
       font-size: 16px;
       font-weight: bold;
     }
+    a:hover {
+      color: var(--btn-color) !important;
+    }
   }
   .resume:hover {
     transform: scale(1.05);
-    background-color: var(--accent-color);
+    background-color: var(--btn-text-color);
+    color: var(--btn-color) !important;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    a {
+      color: var(--btn-color) !important;
+    }
   }
 
   .email {

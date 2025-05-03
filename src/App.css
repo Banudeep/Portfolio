@@ -1,15 +1,15 @@
 :root {
-  --background-color: #bcbcbc;
+  --background-color: #dfd0b8;
   --navbar-color: #25282a;
   --navbar-text-color: #ffffff;
   --primary-color: #fd2a2a;
-  --secondary-color: #25282a;
-  --accent-color: #e2e2b6;
-  --btn-color: #0091ff;
-  --btn-text-color: #ffffff;
+  --secondary-color: #153448;
+  --accent-color: #dfd0b8;
+  --btn-color: #153448;
+  --btn-text-color: #dfd0b8;
   --project-text-color: #ffffff;
-  --project-card-bg: #6e6e6e;
-  --text-color: #000000;
+  --project-card-bg: #948979;
+  --text-color: #0c0606;
   --form-text-color: #e2e2b6;
   --footer-text-color: #6eacda;
 }
