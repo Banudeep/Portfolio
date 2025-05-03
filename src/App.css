@@ -1,11 +1,17 @@
 :root {
-  --background-color: #cdcdcd;
-  --btn-color: #0987f2;
-  --btn-text-color: #fff;
-  --project-card-bg: #ffffff00;
-  --text-color: #222;
-  --form-text-color: #555;
-  --footer-text-color: #888;
+  --background-color: #bcbcbc;
+  --navbar-color: #25282a;
+  --navbar-text-color: #ffffff;
+  --primary-color: #fd2a2a;
+  --secondary-color: #25282a;
+  --accent-color: #e2e2b6;
+  --btn-color: #0091ff;
+  --btn-text-color: #ffffff;
+  --project-text-color: #ffffff;
+  --project-card-bg: #6e6e6e;
+  --text-color: #000000;
+  --form-text-color: #e2e2b6;
+  --footer-text-color: #6eacda;
 }
 
 body {

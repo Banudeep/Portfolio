@@ -1,10 +1,10 @@
 .navbar {
   display: flex;
-  background-color: #000000;
+  background-color: var(--navbar-color);
   padding: 10px 10px;
   font-size: auto;
   justify-content: space-between;
-  color: white;
+  color: var(--accent-color);
 
   position: fixed; /* Fixes the navbar to the viewport */
   top: 0; /* Aligns the navbar to the top edge of the viewport */
@@ -23,13 +23,13 @@
   margin-left: 50px;
 
   a {
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s;
   }
 
   a:hover {
-    color: #4caf50;
+    color: var(--navbar-text-color);
   }
 }
 
@@ -41,13 +41,13 @@
   padding: 10px 10px;
 
   a {
-    color: white;
+    color: var(--accent-color);
     text-decoration: none;
     transition: color 0.3s;
   }
 
   a:hover {
-    color: #4caf50;
+    color: var(--navbar-text-color);
   }
 }
 

@@ -6,6 +6,7 @@
   max-width: 1400px;
   margin: 0 auto;
   width: 100%;
+  background-color: var(--background-color);
 }
 
 .header {
@@ -21,7 +22,11 @@
   margin-bottom: 1.5rem;
   font-size: 2.5rem;
   font-weight: 700;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--accent-color)
+  );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -36,7 +41,11 @@
   transform: translateX(-50%);
   width: 60px;
   height: 3px;
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
+  background: linear-gradient(
+    to right,
+    var(--secondary-color),
+    var(--accent-color)
+  );
   border-radius: 2px;
 }
 
@@ -52,54 +61,26 @@
   align-items: center;
   gap: 8px;
   padding: 10px 18px;
-  background-color: #f8f8f8;
+  background-color: var(--secondary-color);
+  color: var(--accent-color) !important;
   border-radius: 25px;
-  color: #333;
   text-decoration: none;
   font-size: 0.95rem;
   font-weight: 500;
   transition: all 0.3s ease;
   margin-bottom: 30px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
-  border: 1px solid #eaeaea;
+  border: 1px solid var(--background-color);
   position: absolute;
   left: 0;
   top: 0;
 }
 
 .backButton:hover {
-  background-color: #f0f0f0;
+  background-color: var(--accent-color);
+  color: var(--secondary-color) !important;
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
-}
-
-.filterContainer {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-bottom: 2rem;
-}
-
-.filterButton {
-  padding: 8px 16px;
-  background-color: #f8f8f8;
-  border: 1px solid #eaeaea;
-  border-radius: 20px;
-  color: #555;
-  font-size: 0.9rem;
-  cursor: pointer;
-  transition: all 0.2s ease;
-}
-
-.filterButton:hover {
-  background-color: #f0f0f0;
-}
-
-.filterButton.active {
-  background: linear-gradient(to right, #4a00e0, #8e2de2);
-  color: white;
-  border: 1px solid transparent;
 }
 
 .projectsContainer {
@@ -120,7 +101,7 @@
   border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  background-color: white;
+  background-color: rgb(35, 30, 30);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   position: relative;
   top: 0;

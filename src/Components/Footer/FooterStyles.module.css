@@ -1,11 +1,11 @@
 .container {
   text-align: center;
-  background-color: black;
+  background-color: var(--navbar-color);
   margin: 0px auto 0px;
   padding: 30px 0% 30px;
 
   p {
     font-size: 16px;
-    color: var(--footer-text-color);
+    color: var(--accent-color);
   }
 }

@@ -4,14 +4,14 @@
   align-items: center;
   flex-direction: column;
   gap: 50px;
-  /* margin: 60px auto 60px; */
-  /* padding: 5% 0%; */
   height: 100dvh;
+  background-color: var(--background-color);
 
   .profile_picture {
     border-radius: 50%;
     max-width: 300px;
     max-height: auto;
+    border: 4px solid var(--secondary-color);
   }
 
   .info {
@@ -21,6 +21,7 @@
     p {
       font-size: 20px;
       max-width: 150ch;
+      color: var(--text-color);
     }
   }
 
@@ -43,22 +44,25 @@
     }
   }
   .resume {
-    background-color: #0093d8;
+    margin-top: 20px;
+    background-color: var(--secondary-color);
     border: none;
     padding: 15px 32px;
     display: inline-block;
     cursor: pointer;
     border-radius: 10px;
-    transition: transform 200ms ease-in-out;
+    transition: transform 200ms ease-in-out, background-color 200ms ease;
 
     a {
-      color: white;
+      color: var(--background-color);
       text-decoration: none;
       font-size: 16px;
+      font-weight: bold;
     }
   }
   .resume:hover {
     transform: scale(1.05);
+    background-color: var(--accent-color);
   }
 
   .email {
@@ -78,7 +82,7 @@
 
   .emailText {
     font-size: 1.1rem;
-    color: #333;
+    color: var(--text-color);
     font-weight: 500;
     letter-spacing: 0.5px;
     word-break: break-all;
