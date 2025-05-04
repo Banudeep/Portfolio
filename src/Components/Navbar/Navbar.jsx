@@ -11,7 +11,21 @@ function Navbar() {
     if (isHomePage) {
       const section = document.getElementById(sectionId);
       if (section) {
-        section.scrollIntoView({ behavior: "smooth" });
+        // Get navbar height - fix the selector to match your actual navbar
+        const navbar = document.querySelector(`.${styles.navbar}`);
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+
+        // Scroll to section with offset for navbar
+        const sectionPosition =
+          section.getBoundingClientRect().top +
+          window.scrollY -
+          navbarHeight -
+          30;
+
+        window.scrollTo({
+          top: sectionPosition,
+          behavior: "smooth",
+        });
       }
     }
   };
@@ -102,7 +116,7 @@ function Navbar() {
             </Link>
           )}
         </li>
-        <li>
+        {/* <li>
           {isHomePage ? (
             <a
               href="#contact"
@@ -118,7 +132,7 @@ function Navbar() {
               Contact
             </Link>
           )}
-        </li>
+        </li> */}
       </div>
     </nav>
   );

@@ -1,0 +1,90 @@
+/* Mobile Navigation Styles */
+.mobileNav {
+  display: none; /* Hidden by default, shown only on small screens */
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.hamburger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 24px;
+  width: 30px;
+  padding: 0;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburgerLine {
+  background-color: #333;
+  border-radius: 3px;
+  height: 3px;
+  transition: all 0.3s ease;
+  width: 100%;
+  margin: 2px 0;
+}
+
+/* Hamburger animation */
+.hamburgerLine.open:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburgerLine.open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerLine.open:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.mobileMenu {
+  background-color: rgba(255, 255, 255, 0.95);
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+  z-index: 999;
+}
+
+.mobileMenu.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.mobileMenuItems {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+
+.mobileMenuItems div {
+  font-size: 1.5rem;
+  cursor: pointer;
+  padding: 10px 20px;
+  transition: color 0.2s ease;
+}
+
+.mobileMenuItems div:hover {
+  color: #4831d4; /* Using your theme color */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+  .mobileNav {
+    display: block;
+  }
+}

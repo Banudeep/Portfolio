@@ -3,6 +3,7 @@ import "./App.css";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
+import MobileNav from "./Components/Navbar/MobileNav"; // Import MobileNav component
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Footer from "./Components/Footer/Footer";
@@ -15,13 +16,18 @@ function ScrollHandler() {
   const location = useLocation();
 
   useEffect(() => {
+    // Force scroll to top on initial load or refresh
+    if (!location.state) {
+      window.scrollTo(0, 0);
+    }
+
     // Check if we have a target section to scroll to
-    if (location.state && location.state.section) {
+    else if (location.state && location.state.section) {
       const sectionId = location.state.section;
       setTimeout(() => {
         const section = document.getElementById(sectionId);
         if (section) {
-          section.scrollIntoView({ behavior: "smooth" });
+          section.scrollIntoView({ behavior: "smooth", block: "start" });
         } else if (sectionId === "Hero") {
           window.scrollTo({ top: 0, behavior: "smooth" });
         }
@@ -33,14 +39,19 @@ function ScrollHandler() {
 }
 
 function HomePage() {
+  // Reset scroll position when the HomePage component mounts
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <>
       <ScrollHandler />
       <Navbar />
+      <MobileNav />
       <Hero />
       <Projects />
       <Skills />
-      <br />
       <Experience />
       <Footer />
     </>
@@ -57,12 +68,23 @@ function App() {
           element={
             <>
               <Navbar />
+              <MobileNav />
               <AllProjects />
               <Footer />
             </>
           }
         />
-        <Route path="/skills" element={<SkillsPage />} />
+        <Route
+          path="/skills"
+          element={
+            <>
+              <Navbar />
+              <MobileNav />
+              <SkillsPage />
+              <Footer />
+            </>
+          }
+        />
       </Routes>
     </HashRouter>
   );

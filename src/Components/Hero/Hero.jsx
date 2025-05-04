@@ -41,16 +41,14 @@ function Hero() {
               <img src={github_icon} />
             </a>
           </span>
-          <div className={styles.resume}>
-            {/* <a href="../../assets/" download="Banudeep_Reddy_Resume.pdf"> */}
-            <a
-              href="Banudeep_Reddy_Resume.pdf"
-              target="_blank"
-              // download="Banudeep_Reddy_Resume.pdf"
-            >
-              Resume
-            </a>
-          </div>
+          {/* <div className={styles.resume}> */}
+          <button
+            onClick={() => window.open("Banudeep_Reddy_Resume.pdf", "_blank")}
+            className={styles.resume}
+          >
+            Resume
+          </button>
+          {/* </div> */}
         </div>
       </div>
     </section>

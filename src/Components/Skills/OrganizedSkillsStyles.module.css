@@ -28,7 +28,7 @@
   max-width: 48%;
   min-width: 420px;
   margin: 0 0.5rem;
-  background: var(--primary-color);
+  background: var(--project-card-bg);
   border-radius: 18px;
   box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
   padding: 2rem 1.5rem 1.5rem 1.5rem;
@@ -52,7 +52,9 @@
 }
 
 .organizedSkillsGrid {
-  display: grid;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
   gap: 1.2rem 1.2rem;
   width: 100%;
@@ -96,7 +98,7 @@
   width: 60px;
   height: 60px;
   object-fit: contain;
-  filter: brightness(0) invert(1);
+  /* filter: brightness(0) invert(1); */
 }
 
 .organizedSkillName {

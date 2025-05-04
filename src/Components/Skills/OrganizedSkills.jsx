@@ -1,4 +1,5 @@
 import React from "react";
+import { useEffect } from "react";
 import reactIcon from "../../assets/react.svg";
 import styles from "./OrganizedSkillsStyles.module.css";
 import pythonLogo from "../../assets/tech-logos/python-logo-only.svg";

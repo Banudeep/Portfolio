@@ -50,6 +50,8 @@ import campus_feedback from "../../../assets/campus_feedback.png";
 import fraudsense from "../../../assets/fraudsense.png";
 import portfolio from "../../../assets/portfolio.png";
 import medifact from "../../../assets/medifact.png";
+import classifier from "../../../assets/classifier.png";
+import ASL from "../../../assets/ASL.png";
 
 function AllProjects() {
   // Scroll to top when component mounts
@@ -156,7 +158,7 @@ function AllProjects() {
       title: "PASCAL VOC Multi-Label Classifier",
       description:
         "Implemented a PyTorch-based image classifier to detect multiple object categories per image in the PASCAL VOC 2007 dataset using FCN and CNN architectures.",
-      image: github_icon, // import like: import pascal_classifier from "../assets/pascal_classifier.png"
+      image: classifier, // import like: import pascal_classifier from "../assets/pascal_classifier.png"
       link: "https://github.com/Banudeep/pascal-voc-multilabel", // replace with your GitHub repo if different
       techStack: [
         { name: "PyTorch", icon: faFire },
@@ -171,7 +173,7 @@ function AllProjects() {
       title: "ASL Translator",
       description:
         "A real-time American Sign Language (ASL) translator using computer vision and deep learning, enabling seamless communication for the hearing impaired.",
-      image: github_icon,
+      image: ASL,
       link: "https://github.com/Banudeep/fitness-tracker",
       techStack: [
         { name: "OpenCV", icon: faCamera },
