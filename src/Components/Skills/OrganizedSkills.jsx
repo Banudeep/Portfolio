@@ -32,7 +32,7 @@ const skillCategories = [
     title: "Programming Languages",
     skills: [
       { name: "Python", icon: pythonLogo },
-      { name: "Node", icon: nodeLogo },
+      // { name: "Node", icon: nodeLogo },
       { name: "JavaScript", icon: jsLogo },
       { name: "TypeScript", icon: tsLogo },
       { name: "HTML", icon: htmlLogo },
