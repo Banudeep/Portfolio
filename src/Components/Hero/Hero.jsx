@@ -3,6 +3,8 @@ import styles from "./HeroStyles.module.css";
 import linkedin_icon from "../../assets/linkedin_icon.png";
 import github_icon from "../../assets/github_icon.png";
 import profile_pic from "../../assets/banudeep_picture.jpeg";
+import aws_ccp from "../../assets/aws-certified-cloud-practitioner.png";
+import gcp_ace from "../../assets/associate-cloud-engineer-certification.png";
 
 function Hero() {
   useEffect(() => {
@@ -62,13 +64,21 @@ function Hero() {
           >
             Resume
           </button>
-
+          <br />
+          <br />
+          <br />{" "}
           <span>
             <a
               href="https://www.credly.com/badges/cffbe700-be16-43d2-8064-feaeafb229a0/public_url"
               target="_blank"
             >
-              <img src={linkedin_icon} />
+              <img className={styles.certBadge} src={aws_ccp} />
+            </a>
+            <a
+              href="https://www.credly.com/badges/55cb038c-32db-43f5-a672-440b0b4da63b/public_url"
+              target="_blank"
+            >
+              <img className={styles.certBadge} src={gcp_ace} />
             </a>
           </span>
         </div>
