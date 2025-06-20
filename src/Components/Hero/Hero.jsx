@@ -1,10 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./HeroStyles.module.css";
 import linkedin_icon from "../../assets/linkedin_icon.png";
 import github_icon from "../../assets/github_icon.png";
 import profile_pic from "../../assets/banudeep_picture.jpeg";
 
 function Hero() {
+  useEffect(() => {
+    // Load Credly badge script
+    const script = document.createElement("script");
+    script.src = "//cdn.credly.com/assets/utilities/embed.js";
+    script.async = true;
+    document.body.appendChild(script);
+
+    return () => {
+      // Clean up script when component unmounts
+      if (script) {
+        document.body.removeChild(script);
+      }
+    };
+  }, []);
+
   return (
     <section id="Hero">
       <div className={styles.container}>
@@ -41,14 +56,21 @@ function Hero() {
               <img src={github_icon} />
             </a>
           </span>
-          {/* <div className={styles.resume}> */}
           <button
             onClick={() => window.open("Banudeep_Reddy_Resume.pdf", "_blank")}
             className={styles.resume}
           >
             Resume
           </button>
-          {/* </div> */}
+
+          <span>
+            <a
+              href="https://www.credly.com/badges/cffbe700-be16-43d2-8064-feaeafb229a0/public_url"
+              target="_blank"
+            >
+              <img src={linkedin_icon} />
+            </a>
+          </span>
         </div>
       </div>
     </section>

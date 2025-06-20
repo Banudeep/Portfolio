@@ -3,7 +3,6 @@ import "./App.css";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
 import Hero from "./Components/Hero/Hero";
 import Navbar from "./Components/Navbar/Navbar";
-import MobileNav from "./Components/Navbar/MobileNav"; // Import MobileNav component
 import Projects from "./Components/Projects/Projects";
 import Skills from "./Components/Skills/Skills";
 import Footer from "./Components/Footer/Footer";
@@ -48,7 +47,6 @@ function HomePage() {
     <>
       <ScrollHandler />
       <Navbar />
-      <MobileNav />
       <Hero />
       <Projects />
       <Skills />
@@ -68,23 +66,12 @@ function App() {
           element={
             <>
               <Navbar />
-              <MobileNav />
               <AllProjects />
               <Footer />
             </>
           }
         />
-        <Route
-          path="/skills"
-          element={
-            <>
-              <Navbar />
-              <MobileNav />
-              <SkillsPage />
-              <Footer />
-            </>
-          }
-        />
+        <Route path="/skills" element={<SkillsPage />} />
       </Routes>
     </HashRouter>
   );

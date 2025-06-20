@@ -97,6 +97,23 @@
     letter-spacing: 0.5px;
     word-break: break-all;
   }
+
+  .credlyLink {
+    display: block;
+    margin-top: 20px;
+    text-decoration: none;
+    transition: transform 0.2s ease-in-out;
+  }
+
+  .credlyLink:hover {
+    transform: scale(1.05);
+  }
+
+  .credlyBadge {
+    display: inline-block;
+    min-height: 270px;
+    min-width: 150px;
+  }
 }
 
 @media (width >= 800px) {
