@@ -6,6 +6,7 @@ import profile_pic from "../../assets/banudeep_picture.jpeg";
 import aws_ccp from "../../assets/aws-certified-cloud-practitioner.png";
 import gcp_ace from "../../assets/associate-cloud-engineer-certification.png";
 import aws_dva from "../../assets/aws-certified-developer-associate.png";
+import aws_aif from "../../assets/AWS_AI_founational.png";
 
 function Hero() {
   useEffect(() => {
@@ -80,6 +81,12 @@ function Hero() {
               target="_blank"
             >
               <img className={styles.certBadge} src={aws_dva} />
+            </a>
+            <a
+              href="https://www.credly.com/badges/09dbe47c-11e9-44d3-b5e1-d69abfdf7bf9"
+              target="_blank"
+            >
+              <img className={styles.certBadge} src={aws_aif} />
             </a>
             <a
               href="https://www.credly.com/badges/55cb038c-32db-43f5-a672-440b0b4da63b/public_url"
