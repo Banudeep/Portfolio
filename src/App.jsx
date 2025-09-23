@@ -50,7 +50,7 @@ function HomePage() {
       <Hero />
       <Projects />
       <Skills />
-      <Experience />
+      {/* <Experience /> */}
       <Footer />
     </>
   );

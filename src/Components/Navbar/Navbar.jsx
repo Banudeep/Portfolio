@@ -99,7 +99,7 @@ function Navbar() {
             </Link>
           )}
         </li>
-        <li>
+        {/* <li>
           {isHomePage ? (
             <a
               href="#Experience"
@@ -115,7 +115,7 @@ function Navbar() {
               Experience
             </Link>
           )}
-        </li>
+        </li> */}
         {/* <li>
           {isHomePage ? (
             <a
