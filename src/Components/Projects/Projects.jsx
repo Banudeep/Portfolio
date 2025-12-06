@@ -5,6 +5,7 @@ import zentrail from "../../assets/zentrail.png";
 import sos_app from "../../assets/sos-app.png";
 import medifact from "../../assets/medifact.png";
 import campus_feedback from "../../assets/campus_feedback.png";
+import cascade_voice from "../../assets/cascadeVoice.png";
 import ProjectCard from "./ProjectCard/ProjectCard";
 import { Link } from "react-router-dom";
 
@@ -67,6 +68,24 @@ function Projects() {
       ],
     },
     {
+      title: "CascadeVoice",
+      description:
+        "A real-time voice agent with streaming speech-to-text (STT), large language model (LLM), and text-to-speech (TTS) capabilities. Features multi-provider support (Deepgram, Azure Speech, OpenAI, Azure OpenAI), natural conversation flow with interruption support, live transcription, and a modern web interface.",
+      image: cascade_voice,
+      link: "https://github.com/Banudeep/Voicebot-Cascading",
+      techStack: [
+        { name: "Python", icon: faPython },
+        { name: "FastAPI", icon: faCode },
+        { name: "JavaScript", icon: faJs },
+        { name: "HTML", icon: faHtml5 },
+        { name: "CSS", icon: faCss3 },
+        { name: "Docker", icon: faBoxOpen },
+        { name: "Azure", icon: faCloud },
+        { name: "OpenAI", icon: faBrain },
+        { name: "WebSocket", icon: faServer },
+      ],
+    },
+    {
       title: "SOS App",
       description:
         "An AI-powered emergency response system that detects accidents in real-time, automates incident reporting, and optimizes ambulance dispatch using intelligent geospatial analysis.",
@@ -79,23 +98,6 @@ function Projects() {
         { name: "OpenCV", icon: faCamera },
         { name: "MongoDB", icon: faDatabase },
         // { name: "Python", icon: faPython },
-      ],
-    },
-    {
-      title: "MediFact",
-      description:
-        "A Chrome extension that summarizes health content, verifies medical claims using AI, and explains complex terms with real-time glossary lookups.",
-      image: medifact, // use your imported asset like: import medifact from "../assets/medifact.png"
-      link: "https://devpost.com/software/medifact", // or GitHub if available
-      techStack: [
-        { name: "Manifest V3, Chrome Extension", icon: faChrome },
-        // { name: "JavaScript", icon: faJs },
-        // { name: "HTML", icon: faHtml5 },
-        // { name: "CSS", icon: faCss3 },
-        { name: "FastAPI", icon: faCode },
-        { name: "Gemini API", icon: faRobot },
-        { name: "Google Fact Check API", icon: faSearch },
-        { name: "BioBERT", icon: faBrain },
       ],
     },
   ];

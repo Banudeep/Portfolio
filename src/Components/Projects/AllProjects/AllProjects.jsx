@@ -52,6 +52,8 @@ import portfolio from "../../../assets/portfolio.png";
 import medifact from "../../../assets/medifact.png";
 import classifier from "../../../assets/classifier.png";
 import ASL from "../../../assets/ASL.png";
+import cascade_voice from "../../../assets/cascadeVoice.png";
+import stsvoice from "../../../assets/STSVoice.png";
 
 function AllProjects() {
   // Scroll to top when component mounts
@@ -78,6 +80,24 @@ function AllProjects() {
       ],
     },
     {
+      title: "CascadeVoice",
+      description:
+        "A real-time voice agent with streaming speech-to-text (STT), large language model (LLM), and text-to-speech (TTS) capabilities. Features multi-provider support (Deepgram, Azure Speech, OpenAI, Azure OpenAI), natural conversation flow with interruption support, live transcription, and a modern web interface.",
+      image: cascade_voice, // TODO: Add CascadeVoice image asset
+      link: "https://github.com/Banudeep/Voicebot-Cascading",
+      techStack: [
+        { name: "Python", icon: faPython },
+        { name: "FastAPI", icon: faCode },
+        { name: "JavaScript", icon: faJs },
+        { name: "HTML", icon: faHtml5 },
+        { name: "CSS", icon: faCss3 },
+        { name: "Docker", icon: faBoxOpen },
+        { name: "Azure", icon: faCloud },
+        { name: "OpenAI", icon: faBrain },
+        { name: "WebSocket", icon: faServer },
+      ],
+    },
+    {
       title: "SOS App",
       description:
         "An AI-powered emergency response system that detects accidents in real-time, automates incident reporting, and optimizes ambulance dispatch using intelligent geospatial analysis.",
@@ -89,7 +109,24 @@ function AllProjects() {
         { name: "Google Gemini API", icon: faRobot },
         { name: "OpenCV", icon: faCamera },
         { name: "MongoDB", icon: faDatabase },
-        // { name: "Python", icon: faPython },
+        { name: "Python", icon: faPython },
+      ],
+    },
+    {
+      title: "STSVoice",
+      description:
+        "A Speech-to-Speech voice agent powered by GPT-4o Realtime API that enables direct audio-to-audio processing with zero intermediate text conversion. Features ultra-low latency conversations, natural interruptions, server-side voice activity detection, full-duplex communication, and real-time transcription.",
+      image: stsvoice, // TODO: Add STSVoice image asset
+      link: "https://github.com/Banudeep/Voicebot-STS",
+      techStack: [
+        { name: "Python", icon: faPython },
+        { name: "JavaScript", icon: faJs },
+        { name: "HTML", icon: faHtml5 },
+        { name: "CSS", icon: faCss3 },
+        { name: "Docker", icon: faBoxOpen },
+        { name: "GPT-4o Realtime", icon: faBrain },
+        { name: "WebSocket", icon: faServer },
+        { name: "Azure", icon: faCloud },
       ],
     },
     {
