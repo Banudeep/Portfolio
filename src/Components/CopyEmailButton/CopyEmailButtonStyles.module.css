@@ -1,0 +1,46 @@
+.copyButton {
+  background: transparent;
+  border: 2px solid var(--accent-color);
+  color: var(--accent-color);
+  padding: 8px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  position: relative;
+}
+
+.copyButton:hover {
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.copyButton:active {
+  transform: translateY(0);
+}
+
+.copyButton svg {
+  font-size: 14px;
+}
+
+.tooltip {
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .copyButton {
+    padding: 6px 10px;
+    font-size: 0.85rem;
+  }
+
+  .tooltip {
+    font-size: 0.8rem;
+  }
+}
+

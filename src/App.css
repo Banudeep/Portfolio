@@ -1,4 +1,6 @@
-:root {
+/* Light Theme (Default) */
+:root,
+[data-theme="light"] {
   --background-color: #dfd0b8;
   --navbar-color: #25282a;
   --navbar-text-color: #ffffff;
@@ -14,11 +16,68 @@
   --footer-text-color: #6eacda;
 }
 
+/* Dark Theme */
+[data-theme="dark"] {
+  --background-color: #2d2d2d;
+  --navbar-color: #1f1f1f;
+  --navbar-text-color: #ffffff;
+  --primary-color: #ff4444;
+  --secondary-color: #3d5a6e;
+  --accent-color: #5aa0f2;
+  --btn-color: #3d5a6e;
+  --btn-text-color: #e0e0e0;
+  --project-text-color: #e0e0e0;
+  --project-card-bg: #3a3a3a;
+  --text-color: #e0e0e0;
+  --form-text-color: #b0b0b0;
+  --footer-text-color: #6eacda;
+}
+
 body {
   background-color: var(--background-color);
   /* display: flex; */
   justify-content: center;
   /* margin: 60px auto 60px; */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+* {
+  transition: background-color 0.3s ease, color 0.3s ease,
+    border-color 0.3s ease;
+}
+
+/* Focus indicators for accessibility */
+*:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+button:focus-visible,
+a:focus-visible {
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Skip to content link */
+.skipLink {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--secondary-color);
+  color: var(--accent-color);
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 10000;
+  border-radius: 0 0 4px 0;
+  font-weight: 600;
+  transition: top 0.3s ease;
+}
+
+.skipLink:focus {
+  top: 0;
+  outline: 3px solid var(--accent-color);
+  outline-offset: 2px;
 }
 
 #root {
@@ -27,17 +86,25 @@ body {
   align-items: stretch;
 }
 
+/* Typography System */
 h1,
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   color: var(--text-color);
   margin: 0;
   padding: 0;
+  line-height: 1.5;
 }
 
 h2,
 h3,
+h4,
+h5,
+h6,
 p {
   font-family: "Roboto Mono", monospace;
 }
@@ -45,21 +112,46 @@ p {
 h1,
 h2 {
   text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
 
 h2,
 h3 {
   font-size: 20px;
+  font-weight: 500;
 }
 
 h1 {
   font-family: "Rubik", sans-serif;
   font-size: 32px;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h3 {
+  font-weight: 500;
+}
+
+h4 {
+  font-size: 18px;
+  font-weight: 500;
 }
 
 p {
   font-size: 16px;
   font-weight: 300;
+  line-height: 1.6;
+}
+
+/* Spacing System */
+:root {
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 24px;
+  --spacing-xl: 32px;
+  --spacing-2xl: 48px;
+  --spacing-3xl: 64px;
 }
 
 .sectionTitle {
@@ -68,6 +160,53 @@ p {
 
 .hover {
   cursor: pointer;
+}
+
+/* Mobile Animations */
+@media (max-width: 799px) {
+  h1 {
+    font-size: 28px;
+  }
+  h2,
+  h3 {
+    font-size: 18px;
+  }
+  p {
+    font-size: 16px;
+  }
+
+  /* Enhanced mobile animations */
+  .projectCard {
+    animation: slideInUp 0.5s ease-out;
+  }
+
+  @keyframes slideInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Smooth transitions for mobile interactions */
+  button,
+  a {
+    transition: transform 0.2s ease, opacity 0.2s ease,
+      background-color 0.2s ease;
+  }
+
+  button:active,
+  a:active {
+    transform: scale(0.95);
+  }
+
+  /* Mobile-friendly hover states */
+  .projectCard:active {
+    transform: scale(0.98);
+  }
 }
 
 @media (width >= 800px) {

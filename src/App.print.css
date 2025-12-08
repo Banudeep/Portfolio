@@ -1,0 +1,114 @@
+/* Print Stylesheet */
+
+@media print {
+  /* Hide non-essential elements */
+  .navbar,
+  .mobileMenuButton,
+  .themeToggle,
+  .scrollToTop,
+  .skipLink,
+  .scrollProgress,
+  button,
+  .filterContainer,
+  .viewAllButton,
+  .backButton {
+    display: none !important;
+  }
+
+  /* Page setup */
+  @page {
+    margin: 1.5cm;
+    size: A4;
+  }
+
+  /* Typography for print */
+  body {
+    font-size: 12pt;
+    line-height: 1.5;
+    color: #000;
+    background: #fff;
+  }
+
+  h1 {
+    font-size: 24pt;
+    page-break-after: avoid;
+    margin-top: 0;
+  }
+
+  h2 {
+    font-size: 18pt;
+    page-break-after: avoid;
+    margin-top: 1em;
+  }
+
+  h3 {
+    font-size: 14pt;
+    page-break-after: avoid;
+  }
+
+  p {
+    font-size: 12pt;
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* Links */
+  a {
+    color: #000;
+    text-decoration: underline;
+  }
+
+  a[href^="http"]:after {
+    content: " (" attr(href) ")";
+    font-size: 10pt;
+    color: #666;
+  }
+
+  /* Images */
+  img {
+    max-width: 100%;
+    height: auto;
+    page-break-inside: avoid;
+  }
+
+  /* Sections */
+  section {
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+
+  /* Projects */
+  .projectCard {
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+    border: 1px solid #ccc;
+    padding: 1em;
+  }
+
+  /* Skills */
+  .techStack {
+    page-break-inside: avoid;
+  }
+
+  /* Footer */
+  footer {
+    page-break-inside: avoid;
+    margin-top: 2em;
+    padding-top: 1em;
+    border-top: 1px solid #ccc;
+  }
+
+  /* Avoid page breaks */
+  .container,
+  .info,
+  .projectsContainer {
+    page-break-inside: avoid;
+  }
+
+  /* Print URLs */
+  .certBadge {
+    max-width: 80px;
+    height: auto;
+  }
+}
+

@@ -75,13 +75,27 @@
     }
   }
 
+  .emailContainer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 15px;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+  }
+
   .email {
     display: flex;
     align-items: center;
     gap: 10px;
-    justify-content: center;
-    margin-top: 15px;
-    margin-bottom: 10px;
+    text-decoration: none;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+  }
+
+  .email:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
   }
 
   .gmailIcon {
@@ -110,6 +124,69 @@
   }
 }
 
+@media (max-width: 799px) {
+  .container {
+    height: auto;
+    min-height: 100dvh;
+    padding: 80px 20px 40px;
+    gap: 30px;
+  }
+
+  .profile_picture {
+    max-width: 200px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .info {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .info h1 {
+    font-size: 1.8rem;
+    line-height: 1.2;
+  }
+
+  .info h2 {
+    font-size: 1rem;
+  }
+
+  .info p {
+    font-size: 16px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .email {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .emailText {
+    font-size: 0.95rem;
+    word-break: break-word;
+  }
+
+  .container .certBadge {
+    height: 60px !important;
+    width: 60px !important;
+    max-width: 60px !important;
+  }
+
+  span {
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+  }
+
+  .resume {
+    padding: 12px 24px;
+    font-size: 14px;
+  }
+}
+
 @media (width >= 800px) {
   .container {
     flex-direction: row;
@@ -124,6 +201,11 @@
       border-radius: 50%;
       max-width: 350px;
       max-height: auto;
+    }
+    .certBadge {
+      height: 100px !important;
+      width: 100px !important;
+      max-width: 100px !important;
     }
   }
 }
@@ -143,6 +225,12 @@
       border-radius: 50%;
       max-width: 450px;
       max-height: auto;
+    }
+    .certBadge {
+      height: 120px;
+      width: 120px;
+      transition: transform 0.3s ease;
+      max-width: 100%;
     }
   }
 }

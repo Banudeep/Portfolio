@@ -30,10 +30,45 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;600;700&family=Roboto+Mono:wght@300;400;500;600&display=swap" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Banudeep Reddy</title>
-    <script type="module" crossorigin src="/Portfolio/assets/index-CSWN8XQu.js"></script>
-    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-CF1Uh2u5.css">
+    <meta name="description" content="Banudeep Reddy Gade - Software Engineer specializing in full-stack development, cloud technologies, and AI integration. Portfolio showcasing projects in React, Python, AWS, and more." />
+    <meta name="keywords" content="Software Engineer, Full Stack Developer, React, Python, AWS, AI, Machine Learning, Portfolio" />
+    <meta name="author" content="Banudeep Reddy Gade" />
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://banudeep.github.io/Portfolio/" />
+    <meta property="og:title" content="Banudeep Reddy Gade - Software Engineer Portfolio" />
+    <meta property="og:description" content="Software Engineer specializing in full-stack development, cloud technologies, and AI integration." />
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://banudeep.github.io/Portfolio/" />
+    <meta property="twitter:title" content="Banudeep Reddy Gade - Software Engineer Portfolio" />
+    <meta property="twitter:description" content="Software Engineer specializing in full-stack development, cloud technologies, and AI integration." />
+    
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Banudeep Reddy Gade",
+      "jobTitle": "Software Engineer",
+      "url": "https://banudeep.github.io/Portfolio/",
+      "sameAs": [
+        "https://github.com/Banudeep",
+        "https://www.linkedin.com/in/banudeep-reddy-gade-118013212/"
+      ],
+      "email": "banudeepreddy@gmail.com",
+      "description": "Software Engineer specializing in full-stack development, cloud technologies, and AI integration."
+    }
+    </script>
+    
+    <title>Banudeep Reddy Gade - Software Engineer Portfolio</title>
+    <link rel="stylesheet" href="data:text/css;base64,LyogUHJpbnQgU3R5bGVzaGVldCAqLw0KDQpAbWVkaWEgcHJpbnQgew0KICAvKiBIaWRlIG5vbi1lc3NlbnRpYWwgZWxlbWVudHMgKi8NCiAgLm5hdmJhciwNCiAgLm1vYmlsZU1lbnVCdXR0b24sDQogIC50aGVtZVRvZ2dsZSwNCiAgLnNjcm9sbFRvVG9wLA0KICAuc2tpcExpbmssDQogIC5zY3JvbGxQcm9ncmVzcywNCiAgYnV0dG9uLA0KICAuZmlsdGVyQ29udGFpbmVyLA0KICAudmlld0FsbEJ1dHRvbiwNCiAgLmJhY2tCdXR0b24gew0KICAgIGRpc3BsYXk6IG5vbmUgIWltcG9ydGFudDsNCiAgfQ0KDQogIC8qIFBhZ2Ugc2V0dXAgKi8NCiAgQHBhZ2Ugew0KICAgIG1hcmdpbjogMS41Y207DQogICAgc2l6ZTogQTQ7DQogIH0NCg0KICAvKiBUeXBvZ3JhcGh5IGZvciBwcmludCAqLw0KICBib2R5IHsNCiAgICBmb250LXNpemU6IDEycHQ7DQogICAgbGluZS1oZWlnaHQ6IDEuNTsNCiAgICBjb2xvcjogIzAwMDsNCiAgICBiYWNrZ3JvdW5kOiAjZmZmOw0KICB9DQoNCiAgaDEgew0KICAgIGZvbnQtc2l6ZTogMjRwdDsNCiAgICBwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsNCiAgICBtYXJnaW4tdG9wOiAwOw0KICB9DQoNCiAgaDIgew0KICAgIGZvbnQtc2l6ZTogMThwdDsNCiAgICBwYWdlLWJyZWFrLWFmdGVyOiBhdm9pZDsNCiAgICBtYXJnaW4tdG9wOiAxZW07DQogIH0NCg0KICBoMyB7DQogICAgZm9udC1zaXplOiAxNHB0Ow0KICAgIHBhZ2UtYnJlYWstYWZ0ZXI6IGF2b2lkOw0KICB9DQoNCiAgcCB7DQogICAgZm9udC1zaXplOiAxMnB0Ow0KICAgIG9ycGhhbnM6IDM7DQogICAgd2lkb3dzOiAzOw0KICB9DQoNCiAgLyogTGlua3MgKi8NCiAgYSB7DQogICAgY29sb3I6ICMwMDA7DQogICAgdGV4dC1kZWNvcmF0aW9uOiB1bmRlcmxpbmU7DQogIH0NCg0KICBhW2hyZWZePSJodHRwIl06YWZ0ZXIgew0KICAgIGNvbnRlbnQ6ICIgKCIgYXR0cihocmVmKSAiKSI7DQogICAgZm9udC1zaXplOiAxMHB0Ow0KICAgIGNvbG9yOiAjNjY2Ow0KICB9DQoNCiAgLyogSW1hZ2VzICovDQogIGltZyB7DQogICAgbWF4LXdpZHRoOiAxMDAlOw0KICAgIGhlaWdodDogYXV0bzsNCiAgICBwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7DQogIH0NCg0KICAvKiBTZWN0aW9ucyAqLw0KICBzZWN0aW9uIHsNCiAgICBwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7DQogICAgbWFyZ2luLWJvdHRvbTogMWVtOw0KICB9DQoNCiAgLyogUHJvamVjdHMgKi8NCiAgLnByb2plY3RDYXJkIHsNCiAgICBwYWdlLWJyZWFrLWluc2lkZTogYXZvaWQ7DQogICAgbWFyZ2luLWJvdHRvbTogMWVtOw0KICAgIGJvcmRlcjogMXB4IHNvbGlkICNjY2M7DQogICAgcGFkZGluZzogMWVtOw0KICB9DQoNCiAgLyogU2tpbGxzICovDQogIC50ZWNoU3RhY2sgew0KICAgIHBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsNCiAgfQ0KDQogIC8qIEZvb3RlciAqLw0KICBmb290ZXIgew0KICAgIHBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsNCiAgICBtYXJnaW4tdG9wOiAyZW07DQogICAgcGFkZGluZy10b3A6IDFlbTsNCiAgICBib3JkZXItdG9wOiAxcHggc29saWQgI2NjYzsNCiAgfQ0KDQogIC8qIEF2b2lkIHBhZ2UgYnJlYWtzICovDQogIC5jb250YWluZXIsDQogIC5pbmZvLA0KICAucHJvamVjdHNDb250YWluZXIgew0KICAgIHBhZ2UtYnJlYWstaW5zaWRlOiBhdm9pZDsNCiAgfQ0KDQogIC8qIFByaW50IFVSTHMgKi8NCiAgLmNlcnRCYWRnZSB7DQogICAgbWF4LXdpZHRoOiA4MHB4Ow0KICAgIGhlaWdodDogYXV0bzsNCiAgfQ0KfQ0KDQo=" media="print" />
+    <script type="module" crossorigin src="/Portfolio/assets/index-Boyf588n.js"></script>
+    <link rel="stylesheet" crossorigin href="/Portfolio/assets/index-CT9vhc1A.css">
   </head>
   <body>
     <div id="root"></div>

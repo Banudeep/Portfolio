@@ -1,14 +1,24 @@
-import React, { useEffect } from "react";
+import React, { useEffect, Suspense, lazy } from "react";
 import "./App.css";
 import { HashRouter, Routes, Route, useLocation } from "react-router-dom";
-import Hero from "./Components/Hero/Hero";
+import { ThemeProvider } from "./Context/ThemeContext";
+import ErrorBoundary from "./Components/ErrorBoundary/ErrorBoundary";
+import PageTransition from "./Components/PageTransition/PageTransition";
+import LoadingSpinner from "./Components/LoadingSpinner/LoadingSpinner";
 import Navbar from "./Components/Navbar/Navbar";
-import Projects from "./Components/Projects/Projects";
-import Skills from "./Components/Skills/Skills";
-import Footer from "./Components/Footer/Footer";
-import AllProjects from "./Components/Projects/AllProjects/AllProjects";
-import SkillsPage from "./Components/Skills/SkillsPage";
-import Experience from "./Components/Experience/Experience";
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
+import ScrollProgress from "./Components/ScrollProgress/ScrollProgress";
+import SkipToContent from "./Components/SkipToContent/SkipToContent";
+
+// Lazy load components for code splitting
+const Hero = lazy(() => import("./Components/Hero/Hero"));
+const Projects = lazy(() => import("./Components/Projects/Projects"));
+const Skills = lazy(() => import("./Components/Skills/Skills"));
+const Footer = lazy(() => import("./Components/Footer/Footer"));
+const AllProjects = lazy(() =>
+  import("./Components/Projects/AllProjects/AllProjects")
+);
+const SkillsPage = lazy(() => import("./Components/Skills/SkillsPage"));
 
 // This component handles scrolling to sections when navigating from other pages
 function ScrollHandler() {
@@ -44,36 +54,67 @@ function HomePage() {
   }, []);
 
   return (
-    <>
+    <PageTransition>
+      <SkipToContent />
+      <ScrollProgress />
       <ScrollHandler />
       <Navbar />
-      <Hero />
-      <Projects />
-      <Skills />
-      {/* <Experience /> */}
-      <Footer />
-    </>
+      <main id="Hero">
+        <Suspense fallback={<LoadingSpinner />}>
+          <Hero />
+          <Projects />
+          <Skills />
+        </Suspense>
+      </main>
+      <Suspense fallback={null}>
+        <Footer />
+      </Suspense>
+      <ScrollToTop />
+    </PageTransition>
   );
 }
 
 function App() {
   return (
-    <HashRouter basename="/">
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route
-          path="/projects"
-          element={
-            <>
-              <Navbar />
-              <AllProjects />
-              <Footer />
-            </>
-          }
-        />
-        <Route path="/skills" element={<SkillsPage />} />
-      </Routes>
-    </HashRouter>
+    <ErrorBoundary>
+      <ThemeProvider>
+        <HashRouter basename="/">
+          <Routes>
+            <Route path="/" element={<HomePage />} />
+            <Route
+              path="/projects"
+              element={
+                <PageTransition>
+                  <SkipToContent />
+                  <ScrollProgress />
+                  <ScrollHandler />
+                  <Navbar />
+                  <main>
+                    <Suspense fallback={<LoadingSpinner />}>
+                      <AllProjects />
+                    </Suspense>
+                  </main>
+                  <Suspense fallback={null}>
+                    <Footer />
+                  </Suspense>
+                  <ScrollToTop />
+                </PageTransition>
+              }
+            />
+            <Route
+              path="/skills"
+              element={
+                <PageTransition>
+                  <Suspense fallback={<LoadingSpinner />}>
+                    <SkillsPage />
+                  </Suspense>
+                </PageTransition>
+              }
+            />
+          </Routes>
+        </HashRouter>
+      </ThemeProvider>
+    </ErrorBoundary>
   );
 }
 

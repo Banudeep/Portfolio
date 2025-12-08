@@ -40,6 +40,8 @@ const ProjectCard = ({ project }) => {
             src={project.image}
             alt={project.title}
             onError={handleImageError}
+            loading="lazy"
+            decoding="async"
           />
         )}
         <div className={styles.projectInfo}>
