@@ -1,5 +1,5 @@
 .copyButton {
-  background: transparent;
+  background-color: var(--secondary-color);
   border: 2px solid var(--accent-color);
   color: var(--accent-color);
   padding: 8px 12px;
@@ -11,17 +11,33 @@
   transition: all 0.3s ease;
   font-size: 0.9rem;
   position: relative;
+  font-weight: 500;
+}
+
+.copyButton svg {
+  color: var(--accent-color);
 }
 
 .copyButton:hover {
   background-color: var(--accent-color);
-  color: var(--background-color);
+  color: var(--secondary-color);
+  border-color: var(--accent-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+.copyButton:hover svg {
+  color: var(--secondary-color);
+}
+
 .copyButton:active {
   transform: translateY(0);
+  background-color: var(--secondary-color);
+  color: var(--accent-color);
+}
+
+.copyButton:active svg {
+  color: var(--accent-color);
 }
 
 .copyButton svg {
@@ -43,4 +59,3 @@
     font-size: 0.8rem;
   }
 }
-
