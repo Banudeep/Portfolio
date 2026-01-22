@@ -21,8 +21,7 @@ function SkillsPage() {
       <br />
       <Navbar />
       <main>
-        {/* <Skills /> */}
-        <OrganizedSkills />
+        <Skills showButton={false} enableFiltering={true} />
       </main>
       <Footer />
       <ScrollToTop />

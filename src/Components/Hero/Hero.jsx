@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import styles from "./HeroStyles.module.css";
 import CopyEmailButton from "../CopyEmailButton/CopyEmailButton";
+import { profileData } from "../../data/index";
 import linkedin_icon from "../../assets/linkedin_icon.png";
 import github_icon from "../../assets/github_icon.png";
 import profile_pic from "../../assets/banudeep_picture.jpeg";
@@ -30,33 +31,32 @@ function Hero() {
       <div className={styles.container}>
         <img
           src={profile_pic}
-          alt="Banudeep Reddy Gade - Software Engineer"
+          alt={`${profileData.name} - ${profileData.title}`}
           className={styles.profile_picture}
           loading="eager"
         />
         <div className={styles.info}>
           <h1>
-            Banudeep Reddy <br></br>Gade
+            Banudeep Reddy
+            <br />
+            Gade
           </h1>
-          <h2>Software Engineer</h2>
-          <p>
-            Passionate about building scalable, data-driven solutions using
-            full-stack development, cloud technologies, and AI integration.
-          </p>
+          <h2>{profileData.title}</h2>
+          <p>{profileData.description}</p>
           <div className={styles.emailContainer}>
-            <a href="mailto:gbanudeepreddy@gmail.com" className={styles.email}>
+            <a href={`mailto:${profileData.email}`} className={styles.email}>
               <img
                 src="https://img.icons8.com/color/48/000000/gmail-new.png"
                 alt="Gmail"
                 className={styles.gmailIcon}
               />
-              <span className={styles.emailText}>gbanudeepreddy@gmail.com</span>
+              <span className={styles.emailText}>{profileData.email}</span>
             </a>
-            <CopyEmailButton email="gbanudeepreddy@gmail.com" />
+            <CopyEmailButton email={profileData.email} />
           </div>
           <span>
             <a
-              href="https://www.linkedin.com/in/banudeep-reddy-gade-118013212/"
+              href={profileData.socials.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit LinkedIn profile"
@@ -64,7 +64,7 @@ function Hero() {
               <img src={linkedin_icon} alt="LinkedIn icon" />
             </a>
             <a
-              href="https://github.com/Banudeep"
+              href={profileData.socials.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Visit GitHub profile"
@@ -73,7 +73,7 @@ function Hero() {
             </a>
           </span>
           <button
-            onClick={() => window.open("Banudeep_Reddy_Resume.pdf", "_blank")}
+            onClick={() => window.open(profileData.resume, "_blank")}
             className={styles.resume}
             aria-label="Download resume PDF"
           >
@@ -137,5 +137,5 @@ function Hero() {
     </section>
   );
 }
-// C:\Users\banud\OneDrive\Documents\GitHub\Portfolio\src\assets\Banudeep_Reddy_Resume.pdf
+
 export default Hero;

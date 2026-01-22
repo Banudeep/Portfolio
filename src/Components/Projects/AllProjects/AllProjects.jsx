@@ -55,6 +55,11 @@ import classifier from "../../../assets/classifier.png";
 import ASL from "../../../assets/ASL.png";
 import cascade_voice from "../../../assets/cascadeVoice.png";
 import stsvoice from "../../../assets/STSVoice.png";
+import fitnesstracker from "../../../assets/fitnesstracker.png";
+
+// Tech Logos for manual import
+import tsLogo from "../../../assets/tech-logos/ts-logo-256.svg";
+import sqlLogo from "../../../assets/tech-logos/sql-database-generic-svgrepo-com.svg";
 
 function AllProjects() {
   const navigate = useNavigate();
@@ -111,6 +116,20 @@ function AllProjects() {
         { name: "Azure", icon: faCloud },
         { name: "OpenAI", icon: faBrain },
         { name: "WebSocket", icon: faServer },
+      ],
+    },
+    {
+      title: "FitTrack",
+      description:
+        "A cross-platform mobile application designed to help users track their workout progress, visualize data with insightful charts, and stay consistent with their fitness goals.",
+      image: fitnesstracker,
+      link: "https://github.com/Banudeep/FitnessTracker",
+      techStack: [
+        { name: "React Native", icon: faReact },
+        { name: "Expo", icon: faBoxOpen },
+        { name: "TypeScript", icon: tsLogo },
+        { name: "SQLite", icon: sqlLogo },
+        { name: "Firebase", icon: faCloud },
       ],
     },
     {

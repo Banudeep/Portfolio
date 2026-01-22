@@ -1,73 +1,85 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./SkillsStyles.module.css";
-import checkMarkIcon from "../../assets/checkmark.png";
-import SkillList from "./SkillList";
-
+import { featuredSkills, skillsData } from "../../data/index";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import checkMarkIcon from "../../assets/checkmark.png";
 
-function skills() {
+function Skills({ showButton = true, enableFiltering = false }) {
+  const [activeTab, setActiveTab] = useState("All");
+
+  // Format helper
+  const formatCategory = (str) => {
+    const formatted = str.replace(/([A-Z])/g, " $1");
+    // Handle specific cases or generic capitalization
+    if (str === "programmingLanguages") return "Languages";
+    return formatted.charAt(0).toUpperCase() + formatted.slice(1);
+  };
+
+  // Get categories for filtering
+  const categories = ["All", ...Object.keys(skillsData)];
+
+  // Determine which skills to show
+  let skillsDisplay = [];
+  if (enableFiltering) {
+    if (activeTab === "All") {
+      skillsDisplay = Object.values(skillsData).flat();
+    } else {
+      skillsDisplay = skillsData[activeTab] || [];
+    }
+  } else {
+    // If filtering is disabled, show only featured skills (minimalist view)
+    skillsDisplay = featuredSkills;
+  }
+
   return (
     <section id="Skills" className={styles.container}>
-      <h1>skills</h1>
-      <div className={styles.skillList}>
-        {/* Programming Languages */}
-        <SkillList src={checkMarkIcon} skill="Python" />
-        <SkillList src={checkMarkIcon} skill="Node" />
-        <SkillList src={checkMarkIcon} skill="JavaScript" />
-        <SkillList src={checkMarkIcon} skill="TypeScript" />
-        <SkillList src={checkMarkIcon} skill="HTML" />
-        <SkillList src={checkMarkIcon} skill="CSS" />
-        <SkillList src={checkMarkIcon} skill="C" />
-        <SkillList src={checkMarkIcon} skill="C++" />
-        <SkillList src={checkMarkIcon} skill="Java" />
-        <SkillList src={checkMarkIcon} skill="SQL" />
+      <h1 className={styles.sectionTitle}>Skills</h1>
+
+      {/* Show Tabs only if filtering is enabled */}
+      {enableFiltering && (
+        <div className={styles.tabsContainer}>
+          {categories.map((category) => (
+            <button
+              key={category}
+              className={`${styles.tabButton} ${
+                activeTab === category ? styles.activeTab : ""
+              }`}
+              onClick={() => setActiveTab(category)}
+            >
+              {formatCategory(category)}
+            </button>
+          ))}
+        </div>
+      )}
+
+      {/* Skills Grid */}
+      <div className={styles.skillsGrid}>
+        {skillsDisplay.map((skill, index) => (
+          <div key={`${skill.name}-${index}`} className={styles.skillCard}>
+            <div className={styles.iconWrapper}>
+              <img
+                src={skill.icon || checkMarkIcon}
+                alt={skill.name}
+                className={styles.skillIcon}
+              />
+            </div>
+            <span className={styles.skillName}>{skill.name}</span>
+          </div>
+        ))}
       </div>
-      <hr />
-      <div className={styles.skillList}>
-        {/* Frontend Frameworks */}
-        <SkillList src={checkMarkIcon} skill="React" />
-        <SkillList src={checkMarkIcon} skill="Angular" />
-        <SkillList src={checkMarkIcon} skill="Vue" />
-        <SkillList src={checkMarkIcon} skill="Redux" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        {/* Backend / APIs */}
-        <SkillList src={checkMarkIcon} skill="Node.js" />
-        <SkillList src={checkMarkIcon} skill="Express.js" />
-        <SkillList src={checkMarkIcon} skill="FastAPI" />
-        <SkillList src={checkMarkIcon} skill="Postman" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        {/* Databases */}
-        <SkillList src={checkMarkIcon} skill="MySQL" />
-        <SkillList src={checkMarkIcon} skill="MongoDB" />
-      </div>
-      <hr />
-      <div className={styles.skillList}>
-        {/* Cloud & DevOps */}
-        <SkillList src={checkMarkIcon} skill="AWS" />
-        <SkillList src={checkMarkIcon} skill="Docker" />
-        <SkillList src={checkMarkIcon} skill="Kubernetes" />
-        <SkillList src={checkMarkIcon} skill="Git" />
-      </div>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-          marginBottom: "1rem",
-        }}
-      >
-        <a href="#/skills">
-          <button className={styles.gotoSkillsBtn}>
-            View Skills <FontAwesomeIcon icon={faArrowRight} />
-          </button>
-        </a>
-      </div>
+
+      {showButton && (
+        <div className={styles.viewAllContainer}>
+          <a href="#/skills" style={{ textDecoration: "none" }}>
+            <button className={styles.gotoSkillsBtn}>
+              View All Skills <FontAwesomeIcon icon={faArrowRight} />
+            </button>
+          </a>
+        </div>
+      )}
     </section>
   );
 }
 
-export default skills;
+export default Skills;
