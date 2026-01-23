@@ -5,4 +5,4 @@ Live Site: [https://banudeep.github.io/Portfolio/#/](https://banudeep.github.io/
 ## Introduction
 Welcome to my personal portfolio! I am **Banudeep Reddy Gade**, a Software Engineer passionate about building scalable, data-driven solutions using full-stack development, cloud technologies, and AI integration.
 
-This website showcases my projects, skills, and professional journey. Built with **React** and **Vite**.
+This website showcases my projects and skills. Built with **React** and **Vite**.
