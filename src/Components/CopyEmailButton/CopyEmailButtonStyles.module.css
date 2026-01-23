@@ -1,7 +1,7 @@
 .copyButton {
   background: transparent;
-  border: 2px solid var(--accent-color);
-  color: var(--accent-color);
+  border: 2px solid var(--btn-color);
+  color: var(--btn-color);
   padding: 8px 12px;
   border-radius: 6px;
   cursor: pointer;
@@ -14,8 +14,8 @@
 }
 
 .copyButton:hover {
-  background-color: var(--accent-color);
-  color: var(--background-color);
+  background-color: var(--btn-color);
+  color: var(--btn-text-color);
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
