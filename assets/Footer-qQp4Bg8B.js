@@ -1,1 +1,0 @@
-import{j as e}from"./index-CIDas-lK.js";const n="_container_88ev8_1",r={container:n};function s(){return e.jsx("section",{id:"footer",className:r.container,children:e.jsxs("p",{children:["© 2025 Banudeep Reddy Gade. ",e.jsx("br",{}),"All rights reserved."]})})}export{s as default};
