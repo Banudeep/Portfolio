@@ -105,7 +105,6 @@ export const allProjectsData = [
     link: "https://github.com/Banudeep/Voicebot-Farmer-Grants",
     techStack: [
       { name: "Python", icon: faPython },
-      { name: "FastAPI", icon: faCode },
       { name: "JavaScript", icon: faJs },
       { name: "HTML", icon: faHtml5 },
       { name: "CSS", icon: faCss3 },
@@ -135,7 +134,6 @@ export const allProjectsData = [
     link: "https://github.com/Banudeep/Voicebot-Cascading",
     techStack: [
       { name: "Python", icon: faPython },
-      { name: "FastAPI", icon: faCode },
       { name: "JavaScript", icon: faJs },
       { name: "HTML", icon: faHtml5 },
       { name: "CSS", icon: faCss3 },
@@ -265,10 +263,14 @@ export const allProjectsData = [
   },
 ];
 
-const featuredProjectTitles = ["Zentrail", "Voicebot Farmer Grants", "FitTrack"];
+const featuredProjectTitles = [
+  "Zentrail",
+  "Voicebot Farmer Grants",
+  "FitTrack",
+];
 
 export const projectsData = allProjectsData.filter(({ title }) =>
-  featuredProjectTitles.includes(title)
+  featuredProjectTitles.includes(title),
 );
 
 export const skillsData = {
